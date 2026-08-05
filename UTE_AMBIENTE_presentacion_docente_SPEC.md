@@ -220,8 +220,25 @@ Si te encuentras trabado en algo particular quiero que resuelvas de la mejor man
 
 ## 6. Estado actual de la tarea
 
-- **Fase 0 — NO INICIADA.** No se creó ninguna diapositiva todavía.
-- Motivo del bloqueo: en la sesión donde se definió todo esto, el conector MCP de Canva estaba desautorizado al momento de arrancar la sesión. Se reautorizó después, pero el listado de herramientas MCP se congela al inicio de la sesión, así que las herramientas de Canva nunca llegaron a cargarse (`Error: No such tool available: mcp__Canva__list-folder-items`). Requiere sesión nueva.
+- **Fase 0 — HECHA, esperando aprobación del usuario.**
+  - Diseño: **`DAHRchioh8E`** — "UTE AMBIENTE — Presentación docente (Placa 1 · Portada)".
+  - Editar: https://www.canva.com/d/SCuN6vWCYqcxSz4 · Ver: https://www.canva.com/d/3cAaDid8sg6RuTc
+  - 1 página, 1920×1080 (16:9), página FIXED (editable, no responsive). Guardada (commit confirmado por contenido).
+  - Construida elemento por elemento: fondo Arena `#F1F8E9`, marco de placeholder de foto con borde Verde Bosque `#1B5E20` y esquinas redondeadas, doble ola orgánica (Azul Cielo `#29ABE2` al 55% detrás + Verde Hoja `#4BAE4F`) como transición, banda inferior sólida Verde Hoja, título 84 px bold blanco y subtítulo 52 px blanco.
+  - Sin logo, sin numeración, texto mínimo. ✅
+  - **Pendiente de decisión del usuario: tipografía** (ver limitación abajo).
+- Fases 1 a 5: no iniciadas. No avanzar sin la aprobación de la Fase 0.
+
+### Limitación conocida — tipografía
+
+El conector de Canva **no expone la familia tipográfica**: la operación `format_text` solo permite tamaño, peso, estilo, color, interlineado, alineación, subrayado/tachado y listas. No hay parámetro de fuente. Por eso la Placa 1 quedó con la tipografía por defecto de Canva (`fontRef YACgEZ1cb1Q`), no con **Red Hat Display Black / Poppins** como pide la sección 2.
+
+Opciones para resolverlo (elige el usuario):
+1. El usuario aplica las fuentes a mano en Canva una sola vez (el cambio de fuente se hace por elemento o con "Estilos"), y de ahí en más se replican al duplicar la placa.
+2. Se acepta la tipografía por defecto de Canva para toda la presentación.
+3. Se construyen las placas duplicando una pieza existente de UTE que ya use las fuentes correctas, en vez de crear textos nuevos.
+
+**Recomendación:** opción 1 — que el usuario fije las fuentes en la Placa 1 aprobada, y que las placas siguientes se generen duplicando esa placa ya tipografiada.
 
 ## 7. Cómo retomar en una sesión nueva
 
@@ -237,3 +254,19 @@ Notas técnicas conocidas del conector de Canva (aprendidas trabajando el carrus
 - El `page_count` que devuelve la API suele estar desactualizado: verificar siempre con `get-design-pages`.
 - El `output_image` de `start-editing-transaction` puede mostrar un render viejo; los arrays `richtexts` y `fills` son la fuente de verdad.
 - `.claude/settings.json` ya tiene el allowlist de las herramientas de Canva, pero solo aplica a sesiones nuevas.
+
+### API nueva del conector (agosto 2026) — reemplaza a las herramientas de arriba
+
+El conector cambió de superficie. `start-editing-transaction`, `perform-editing-operations`, `commit-editing-transaction`, `get-design` y `get-design-pages` **ya no existen**. Ahora son dos herramientas:
+
+- **`read-design`** — metadatos, contenido, thumbnails y notas del orador en una sola llamada. Con `open_transaction: true` devuelve el `transaction_id` y el contenido con `[locator_id]` por elemento (ese locator es el `element_id` para editar).
+- **`edit-design`** — aplica operaciones y también finaliza (`finalize: commit | cancel | keep_open`). **No se pueden combinar operaciones con `commit`**: hay que editar primero y commitear en una llamada aparte con `operations: []`.
+
+Aprendido construyendo la Placa 1:
+- **No hay operación para el fondo de página** ni para borrar páginas. El fondo se resuelve insertando un rectángulo a página completa (`insert_shape` con `path: "M0 0H64V64H0z"`, viewBox 64×64) como primer elemento.
+- **No hay control de familia tipográfica** (ver "Limitación conocida — tipografía" en la sección 6).
+- `insert_shape` solo acepta comandos SVG `M/L/H/V/C/S/A/Z`. **`Q` y `T` no están soportados** — las olas orgánicas se dibujan con curvas `C`.
+- En el volcado de `document`, `pos:` se imprime como **`top,left`** (no `left,top`). No confundirse al verificar posiciones.
+- El thumbnail que devuelve `read-design` después de commitear puede venir **cacheado y mostrar el render viejo** (la URL trae `fallbackstale=T`). Para verificar que el guardado funcionó, leer `design_content`, no mirar la imagen.
+- Los thumbnails de `design-manipulation-download.canva.com` **no se pueden descargar desde este entorno**: el proxy corta el CONNECT con 403. Para mostrarle una placa al usuario hay que pasarle el link de Canva.
+- No existe herramienta para crear un diseño en blanco. El lienzo 16:9 se consiguió con `copy-design` de una página de una presentación existente (`DAHO75I1-Ng`, 1920×1080) y borrando después todos sus elementos.

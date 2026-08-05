@@ -29,9 +29,11 @@ Pendiente: terminar las placas que faltan, y conseguir del usuario las fotos rea
 
 ## Proyecto C — Presentación docente de 16 diapositivas
 
-**Estado: no iniciada.** Ver **`UTE_AMBIENTE_presentacion_docente_SPEC.md`** — contiene la especificación completa placa por placa (texto en pantalla + notas del orador), el sistema de diseño, las 7 respuestas ya dadas por el usuario, y el checklist final.
+**Estado: Fase 0 hecha, esperando aprobación del usuario.** Ver **`UTE_AMBIENTE_presentacion_docente_SPEC.md`** — contiene la especificación completa placa por placa (texto en pantalla + notas del orador), el sistema de diseño, las 7 respuestas ya dadas por el usuario, el checklist final y las notas técnicas del conector.
 
-**Próximo paso concreto: Fase 0.** Crear una única diapositiva de prueba (Placa 1 — Portada) en 16:9, mostrarla y esperar aprobación antes de seguir.
+Placa 1 (Portada) creada y guardada: diseño **`DAHRchioh8E`** — https://www.canva.com/d/SCuN6vWCYqcxSz4
+
+**Próximo paso concreto:** que el usuario apruebe (o corrija) la Placa 1 y decida la tipografía — el conector de Canva no permite fijar la familia tipográfica, así que Red Hat Display / Poppins hay que aplicarlas a mano. Recién con eso resuelto, arrancar la Fase 1 (Placas 2 y 3).
 
 ---
 
