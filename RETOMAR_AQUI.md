@@ -29,14 +29,15 @@ Pendiente: terminar las placas que faltan, y conseguir del usuario las fotos rea
 
 ## Proyecto C — Presentación docente de 16 diapositivas
 
-**Estado: Fase 0 aprobada. Fase 1 hecha, esperando aprobación del usuario.** Ver **`UTE_AMBIENTE_presentacion_docente_SPEC.md`** — contiene la especificación completa placa por placa (texto en pantalla + notas del orador), el sistema de diseño, las 7 respuestas ya dadas por el usuario, el checklist final y las notas técnicas del conector.
+**Estado: TERMINADA.** Las 16 placas están construidas y guardadas. Ver **`UTE_AMBIENTE_presentacion_docente_SPEC.md`** — contiene la especificación completa placa por placa, el sistema de diseño, las 7 respuestas del usuario, el checklist final con su estado y las notas técnicas del conector.
 
-Diseño único de la presentación: **`DAHRchioh8E`** — https://www.canva.com/d/yzDGnemvRvnoaxW
-Páginas 1 a 3 listas (Portada, Disparador, Encuadre) de las 16 previstas.
+Diseño único de la presentación: **`DAHRchioh8E`** — https://www.canva.com/d/veSh8Usz6yGanXt
+"UTE AMBIENTE — Tecnología, Diseño y Programación + Educación Ambiental (charla docente, 16 placas)".
 
-**Próximo paso concreto:** con el OK del usuario, arrancar la **Fase 2** (Placas 4 a 8: los 5 ejes de la EAI, bienes comunes, y los tres pasos del algoritmo).
+**Quedan dos cosas en manos del usuario:**
 
-**Tema abierto:** la tipografía. El conector de Canva no permite fijar la familia tipográfica, así que Red Hat Display / Poppins hay que aplicarlas a mano en Canva. Cuanto antes se resuelva, menos placas hay que retocar después.
+1. **Tipografía.** El conector de Canva no permite fijar la familia tipográfica, así que las 16 placas quedaron con la fuente por defecto de Canva. Red Hat Display Black / Poppins hay que aplicarlas a mano.
+2. **Las 4 fotos** de las placas 1, 11, 12 y 13. Cada una tiene un marco con la indicación escrita de qué imagen va; el usuario las coloca a mano, como acordó en la respuesta 5.
 
 ---
 

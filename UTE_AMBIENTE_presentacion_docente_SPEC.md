@@ -227,12 +227,28 @@ Si te encuentras trabado en algo particular quiero que resuelvas de la mejor man
   - Construida elemento por elemento: fondo Arena `#F1F8E9`, marco de placeholder de foto con borde Verde Bosque `#1B5E20` y esquinas redondeadas, doble ola orgánica (Azul Cielo `#29ABE2` al 55% detrás + Verde Hoja `#4BAE4F`) como transición, banda inferior sólida Verde Hoja, título 84 px bold blanco y subtítulo 52 px blanco.
   - Sin logo, sin numeración, texto mínimo. ✅
   - **Pendiente de decisión del usuario: tipografía** (ver limitación abajo). Al 5/8/2026 la Placa 1 sigue con la fuente por defecto de Canva.
-- **Fase 1 — HECHA, esperando aprobación del usuario.** Placas 2 y 3 agregadas como páginas 2 y 3 del mismo diseño `DAHRchioh8E`.
+- **Fase 1 — APROBADA por el usuario** ("Ok, avance"). Placas 2 y 3 agregadas como páginas 2 y 3 del mismo diseño `DAHRchioh8E`.
   - **Placa 2 · Disparador** (página 2, `PB3Nzx5ByB94Wz2B`): estilo A, fondo Verde Bosque a página completa, olas arriba (Verde Hoja + Azul Cielo al 55%), pregunta en blanco 96 px bold centrada. Notas del orador cargadas.
   - **Placa 3 · Encuadre** (página 3, `PB3w6lLvMP2JD7pl`): estilo B, fondo Arena, ícono de escuela dibujado con formas de línea (cuerpo + techo + puerta + 2 ventanas + mástil con banderín Azul Cielo), frase en Verde Bosque 76 px bold, olas al pie. Notas del orador cargadas.
   - Olas variadas de posición entre placas (respuesta 4 del usuario): Placa 1 al medio, Placa 2 arriba, Placa 3 abajo.
   - Ninguna con logo ni numeración.
-- Fases 2 a 5: no iniciadas. No avanzar sin la aprobación de la Fase 1.
+- **Fases 2 a 5 — HECHAS.** El usuario dio el OK para todas las fases restantes de una sola vez ("Ok para todo el resto de las fases"), así que no se pausó entre ellas. Las 16 placas están construidas y guardadas.
+  - **Fase 2** — Placa 4 (5 ejes de la EAI, cinco íconos de línea dibujados: globo, lupa, mano, libro, hoja), Placa 5 (bienes comunes, contraste tipográfico 88/132 px sobre Verde Hoja), Placas 6-7-8 (algoritmo, mismo layout con etiqueta en píldora Azul Cielo: SECUENCIA / CONDICIONAL / BUCLE).
+  - **Fase 3** — Placa 9 (bisagra, Verde Hoja) y Placa 10 (consigna en dos paneles: panel izquierdo Verde Hoja con ícono de mano con planta, panel derecho Arena con la lista de tres problemas).
+  - **Fase 4** — Placas 11, 12 y 13 (panorama), las tres con el mismo marco de placeholder de foto y la indicación escrita de qué imagen va.
+  - **Fase 5** — Placa 14 (pregunta de cierre sobre Verde Bosque), Placa 15 (los dos recursos, **con el link cargado en el propio texto** vía `format_text.link`), Placa 16 (continuidad).
+  - Notas del orador cargadas en las placas 2 a 16. La Placa 1 no lleva notas (la spec indica "—").
+  - Posición de las olas variada placa por placa; la Placa 10 no lleva olas porque el panel dividido ya resuelve la composición.
+
+### Estado del checklist final
+
+- [x] 16 diapositivas, ninguna con logo de UTE.
+- [x] Ninguna diapositiva con numeración visible.
+- [x] Paleta aplicada de forma consistente en las 16 placas.
+- [ ] **Tipografía**: pendiente. Aplicada la jerarquía de tamaños y pesos, pero no la familia Red Hat Display / Poppins — el conector no lo permite (ver limitación arriba).
+- [x] Cada placa con imagen (1, 11, 12, 13) tiene marco de placeholder con la indicación escrita. No se generaron ni buscaron imágenes.
+- [x] Notas del orador en el campo de notas de Canva, no como texto visible.
+- [x] Confirmación del usuario: Fase 0 y Fase 1 aprobadas una por una; Fases 2 a 5 autorizadas en bloque.
 
 ### Limitación conocida — tipografía
 
@@ -282,3 +298,11 @@ Aprendido construyendo las Placas 2 y 3 (Fase 1):
 - **`add_page` con `width`/`height` explícitos crea la página con `design_type: "custom"`** en vez de `"presentation"`, y el diseño pasa a figurar como `["presentation","custom"]`. Las notas del orador igual funcionan. Para las placas que faltan, probar `add_page` **sin** `width`/`height` para que herede el tipo presentación.
 - No hay herramienta para buscar íconos de la biblioteca de Canva. El ícono de escuela de la Placa 3 se dibujó con `insert_shape`: relleno del color de fondo + `stroke_color` Verde Bosque, que da el efecto de ícono de línea. Mismo recurso sirve para el resto de los íconos del sistema.
 - `position_element` exige `top` **y** `left` juntos: para mover un bloque en vertical hay que repetir el `left` original en cada elemento.
+
+Aprendido construyendo las Placas 4 a 16 (Fases 2 a 5):
+- **`add_page` SIN `width`/`height` sí hereda el tipo `presentation`.** Confirmado: las 13 páginas creadas así quedaron 1920×1080 y como presentación. Solo la página 3 quedó `custom` por haberle pasado medidas. El diseño figura como `["presentation","custom"]` por esa única página.
+- Se pueden **agregar muchas páginas en una sola llamada** (13 `add_page` juntos funcionaron), aunque `page_index` sea obligatorio: apunta a la página actual, no a las nuevas.
+- **`format_text` sí soporta `link`**: es la forma de dejar los recursos de la Placa 15 clicables sin generar QR.
+- En el volcado de `document`, `pos:` de un elemento se imprime como `top,left`, pero las **operaciones** reciben `left` y `top` por separado. No confundir al verificar.
+- Los íconos de línea se resuelven con `insert_shape` usando **relleno del color de fondo + `stroke_color`**. Para íconos compuestos (escuela, globo, lupa, mano, libro, hoja) va una forma por trazo, y el orden de inserción define qué tapa a qué.
+- Todo texto nuevo entra en **16 px, negro, alineado a la izquierda**: siempre hace falta una segunda llamada con `format_text` usando los `element_id` que devolvió la primera.
