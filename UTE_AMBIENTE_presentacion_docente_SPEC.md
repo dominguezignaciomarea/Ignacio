@@ -220,14 +220,19 @@ Si te encuentras trabado en algo particular quiero que resuelvas de la mejor man
 
 ## 6. Estado actual de la tarea
 
-- **Fase 0 — HECHA, esperando aprobación del usuario.**
+- **Fase 0 — APROBADA por el usuario** ("Ok, avance").
   - Diseño: **`DAHRchioh8E`** — "UTE AMBIENTE — Presentación docente (Placa 1 · Portada)".
   - Editar: https://www.canva.com/d/SCuN6vWCYqcxSz4 · Ver: https://www.canva.com/d/3cAaDid8sg6RuTc
   - 1 página, 1920×1080 (16:9), página FIXED (editable, no responsive). Guardada (commit confirmado por contenido).
   - Construida elemento por elemento: fondo Arena `#F1F8E9`, marco de placeholder de foto con borde Verde Bosque `#1B5E20` y esquinas redondeadas, doble ola orgánica (Azul Cielo `#29ABE2` al 55% detrás + Verde Hoja `#4BAE4F`) como transición, banda inferior sólida Verde Hoja, título 84 px bold blanco y subtítulo 52 px blanco.
   - Sin logo, sin numeración, texto mínimo. ✅
-  - **Pendiente de decisión del usuario: tipografía** (ver limitación abajo).
-- Fases 1 a 5: no iniciadas. No avanzar sin la aprobación de la Fase 0.
+  - **Pendiente de decisión del usuario: tipografía** (ver limitación abajo). Al 5/8/2026 la Placa 1 sigue con la fuente por defecto de Canva.
+- **Fase 1 — HECHA, esperando aprobación del usuario.** Placas 2 y 3 agregadas como páginas 2 y 3 del mismo diseño `DAHRchioh8E`.
+  - **Placa 2 · Disparador** (página 2, `PB3Nzx5ByB94Wz2B`): estilo A, fondo Verde Bosque a página completa, olas arriba (Verde Hoja + Azul Cielo al 55%), pregunta en blanco 96 px bold centrada. Notas del orador cargadas.
+  - **Placa 3 · Encuadre** (página 3, `PB3w6lLvMP2JD7pl`): estilo B, fondo Arena, ícono de escuela dibujado con formas de línea (cuerpo + techo + puerta + 2 ventanas + mástil con banderín Azul Cielo), frase en Verde Bosque 76 px bold, olas al pie. Notas del orador cargadas.
+  - Olas variadas de posición entre placas (respuesta 4 del usuario): Placa 1 al medio, Placa 2 arriba, Placa 3 abajo.
+  - Ninguna con logo ni numeración.
+- Fases 2 a 5: no iniciadas. No avanzar sin la aprobación de la Fase 1.
 
 ### Limitación conocida — tipografía
 
@@ -270,3 +275,10 @@ Aprendido construyendo la Placa 1:
 - El thumbnail que devuelve `read-design` después de commitear puede venir **cacheado y mostrar el render viejo** (la URL trae `fallbackstale=T`). Para verificar que el guardado funcionó, leer `design_content`, no mirar la imagen.
 - Los thumbnails de `design-manipulation-download.canva.com` **no se pueden descargar desde este entorno**: el proxy corta el CONNECT con 403. Para mostrarle una placa al usuario hay que pasarle el link de Canva.
 - No existe herramienta para crear un diseño en blanco. El lienzo 16:9 se consiguió con `copy-design` de una página de una presentación existente (`DAHO75I1-Ng`, 1920×1080) y borrando después todos sus elementos.
+
+Aprendido construyendo las Placas 2 y 3 (Fase 1):
+- **`add_page` sí acepta `background_color`**, así que en páginas nuevas el fondo se resuelve sin rectángulo. En páginas que ya existen no hay forma de cambiar el fondo por API: hay que taparlo con un rectángulo a página completa.
+- **El `page_id` de una página recién agregada no se puede leer hasta commitear.** `page_metadata` es read-only y solo refleja el estado guardado, aunque se le pase el `transaction_id`. Como `insert_shape` y `add_text` exigen `page_id`, el ciclo obligado es: `add_page` → commit → `read-design` para obtener el id → abrir transacción nueva → construir la placa.
+- **`add_page` con `width`/`height` explícitos crea la página con `design_type: "custom"`** en vez de `"presentation"`, y el diseño pasa a figurar como `["presentation","custom"]`. Las notas del orador igual funcionan. Para las placas que faltan, probar `add_page` **sin** `width`/`height` para que herede el tipo presentación.
+- No hay herramienta para buscar íconos de la biblioteca de Canva. El ícono de escuela de la Placa 3 se dibujó con `insert_shape`: relleno del color de fondo + `stroke_color` Verde Bosque, que da el efecto de ícono de línea. Mismo recurso sirve para el resto de los íconos del sistema.
+- `position_element` exige `top` **y** `left` juntos: para mover un bloque en vertical hay que repetir el `left` original en cada elemento.
