@@ -1,0 +1,173 @@
+La singularidad que no nos contempla: plataformas, rendimiento y la irreductible tarea docente
+
+Ignacio Domínguez
+
+Resumen
+
+Este artículo propone pensar al docente no como un usuario externo de las plataformas digitales sino como alguien ya inmerso en ellas, afectado por la misma lógica que atraviesa al conjunto de la sociedad. A partir de una lectura crítica del capitalismo de plataformas (Srnicek, 2018) y de la sociedad del rendimiento (Han, 2010), se analiza la singularidad tecnológica (Kurzweil, 2005) como proyecto ideológico y su tensión con lo que aquí llamamos singularidad pedagógica: ese momento irreversible en que algo se reorganiza en el que aprende. Frente a la velocidad como mandato, se propone una pedagogía de la pausa como posición política. El artículo incluye un análisis de la relación entre el Gobierno de la Ciudad de Buenos Aires y Google como caso concreto de lo que está en disputa.
+
+Palabras clave: plataformas digitales, trabajo docente, singularidad pedagógica, pedagogía de la pausa, capitalismo de plataformas.
+
+
+I. El docente inmerso
+
+Antes de que suene el timbre ya pasaron muchas cosas.
+
+El grupo de WhatsApp de la escuela llegó con un mensaje a las 7:18. Alguien avisa que llega tarde, otro pregunta quién tiene la llave del aula de Música. Respondemos desde la cama, o desde el baño, o mientras tomamos el primer mate. No hay un momento de entrada al trabajo porque el trabajo ya estaba ahí, esperando.
+
+En el subte o en el bondi, si hay señal, entramos a Instagram. Aparece un reel con una actividad para trabajar fracciones con papel. Lo guardamos. No lo vamos a usar, pero lo guardamos. Hay otro con una idea para el día del maestro. Lo guardamos también. Hay uno más sobre gestión emocional en el aula. Guardado. La carpeta de guardados de Instagram crece a un ritmo que no tiene ninguna relación con lo que después hacemos en el aula, pero guardar se siente productivo. Se siente como planificar.
+
+También está el grupo de WhatsApp de amigos. Ese tiene otra dinámica: cada uno trabaja distinto, tiene horarios distintos, y los mensajes llegan a cualquier hora. A veces hay cadenas de memes sobre el aguinaldo, a veces alguien comparte una noticia, a veces hay silencio de días. El grupo existe, pesa, requiere atención aunque no haya nada urgente.
+
+En el recreo, entre el café y la fotocopiadora, revisamos el teléfono. PedidosYa para el sábado, MercadoLibre para ver si llegó el pedido, la aplicación de Edesur porque este mes la boleta vino rarísima, la de Movistar para chequear el consumo de datos, la del consorcio para pagar las expensas, la del banco para ver si acreditó el sueldo. Un momento: ¿cuál banco tiene descuento hoy? Hay que abrir otra aplicación para averiguarlo. Después revisamos Booking porque alguien subió una historia de un lugar en el que quisiéramos estar el fin de semana, aunque sabemos que probablemente no vamos a ir. Y Airbnb también, por las dudas. Y Google Maps para ver cuánto queda desde acá.
+
+En algún momento de la tarde, si hay reunión de equipo, conectamos por Zoom. Ese Zoom que quedó de la pandemia y que nunca terminamos de configurar bien. La cámara funciona, el micrófono a veces no. Después de la reunión abrimos Drive para buscar una planificación, Excel para actualizar el registro de salida de visita, y Gmail porque llegó un correo de la supervisión que dice "urgente" pero no es tan urgente.
+
+Y entonces están las de Google. Google Maps para llegar a la sede de la jornada. Google Fotos porque el celular avisó que "hace tres años estabas acá". Google Drive con las planificaciones del año pasado y del antepenúltimo. Gmail con los correos del cole y los del trabajo anterior y los personales mezclados. Google Meet para las reuniones de equipo cuando no hay Zoom. Google Calendar con los feriados y las fechas de entrega. Google Lens cuando no entendemos la letra de un medicamento. Google Sites para la página que hicimos en una jornada de capacitación y nunca actualizamos. Google Files. Google Forms. Google Classroom. Y Gemini, que llegó hace poco y que todavía no sabemos bien para qué sirve pero está ahí, en el teléfono, en la computadora de la escuela, en la plataforma que usamos para planificar.
+
+Google, Google, Google. En algún momento deja de ser una herramienta y se convierte en el aire que respiramos.
+
+Todo esto pasa antes de dar una sola clase. Y muchos de estos momentos no los percibimos como trabajo, aunque lo son. No los percibimos como tecnología, aunque lo son. Los percibimos como la vida misma, que es exactamente lo que las plataformas buscan.
+
+No es un problema de jóvenes ni de adultos. Es una reorganización de la experiencia cotidiana que afecta a todos. Bourdieu llamaba habitus a eso que el cuerpo aprende sin que nadie se lo enseñe del todo: las disposiciones que se incorporan con la práctica, sin manual, sin decisión consciente. El habitus también aprende a scrollear (Linne, 2023). Y una vez que aprende, le cuesta mucho dejar de hacerlo.
+
+¿Por qué importa esto para pensar la docencia? Porque el docente que entra al aula no es un profesional separado de todo eso. Es alguien que ya lleva horas navegando esa misma lógica. Y esa lógica tiene reglas propias, que no siempre coinciden con lo que la escuela intenta sostener.
+
+
+II. La lógica de las plataformas
+
+Las plataformas no son neutras. Tampoco son simplemente herramientas que podemos usar o no usar según nos parezca. Son infraestructuras que extraen valor de las interacciones que facilitamos, y ese valor se mide principalmente en datos (Srnicek, 2018, p. 40).
+
+La diferencia con los modelos de negocio anteriores es importante. Uber no produce taxis ni contrata choferes. Airbnb no construye hoteles ni aloja turistas. Lo que hacen es intermediar, y en esa intermediación acumulan información sobre hábitos, preferencias, comportamientos y relaciones. Esa información es el verdadero producto. "Las plataformas se posicionan entre usuarios y les permiten interactuar mientras registran esos datos" (Srnicek, 2018, p. 42). El modelo se repite en sectores que parecen muy distintos entre sí pero responden a la misma lógica.
+
+Cecilia Rikap (2026) los llama monopolios intelectuales: empresas como Amazon, Google, Meta o Palantir que pusieron el conocimiento y los datos de todo el mundo al servicio de quienes tienen la capacidad de comprenderlos y utilizarlos. Las plataformas que alcanzan efectos de red concentran millones de usuarios, lo que les garantiza una fuente permanente de generación de datos que, combinada con algoritmos e inteligencia artificial, refuerza su posición de monopolio. Son tecnofeudalismos que rompen con el viejo orden del capital: el poder ya no está en quien controla los medios de producción sino en quien controla la información. Los usuarios, nosotros, somos algo parecido a siervos digitales que entregamos constantemente nuestros datos y, sobre todo, nuestra atención.
+
+Esa atención es el recurso más preciado. Para retenerla, las plataformas la fragmentan: un segundo miramos una story, volvemos a ver reels, contestamos WhatsApp, entramos a la publicidad de MercadoLibre, bloqueamos el celular, revisamos los mails, miramos cómo va a estar el clima, volvemos a bloquear el celular. El habitus aprende esto rápido. Y cuando lo aprende, cualquier otra actividad que requiera atención sostenida comienza a sentirse extraña, pesada, difícil.
+
+AprendeBA no escapa a esta lógica. Funciona sobre Google Classroom, lo que significa que cada interacción de docentes y estudiantes con la plataforma ocurre dentro de la infraestructura de Google. Los datos no se quedan en la escuela ni en el GCBA. La relación con Google es una relación contractual con condiciones definidas por una empresa privada que opera con sus propios criterios de rentabilidad. Esto no es un detalle técnico: es una decisión política.
+
+Lo que llamamos AprendeBA tiene, como toda plataforma, un frontend y un backend. El frontend es lo que vemos: las tareas, los cuadernillos, los foros, las videoconferencias. Es la parte amigable, diseñada para que sea fácil de usar y difícil de cuestionar. El backend es lo que no vemos: la arquitectura de datos, los registros de actividad, los criterios con que se mide el "rendimiento" de docentes y estudiantes, los flujos de información hacia otros sistemas. Uno de esos sistemas se llama SATAE: Sistema de Alerta Temprana de Abandono Escolar. Está integrado a la plataforma y cruza información de distintas fuentes para identificar estudiantes en riesgo. La intención puede ser buena. La pregunta que pocos se hacen es quién decide qué datos se cruzan, con qué criterio y con qué consecuencias para quienes aparecen en esa alerta.
+
+
+III. La aceleración como proyecto
+
+En 2001, el inventor y futurista Ray Kurzweil formuló lo que llamó la ley de rendimientos acelerados: el ritmo del cambio tecnológico no es lineal sino exponencial. Lo que tardó décadas en desarrollarse empieza a tardar años, luego meses, luego semanas. En 2005 publicó *The Singularity Is Near*, donde proyectó que hacia 2045 la inteligencia artificial superará la inteligencia humana combinada, produciendo una ruptura irreversible en la historia: la singularidad tecnológica (Kurzweil, 2005).
+
+La singularidad es, en términos matemáticos, un punto en que una función pierde regularidad y las reglas que la describían dejan de aplicarse. Kurzweil la usa para nombrar ese momento en que el desarrollo tecnológico se vuelve impredecible desde los parámetros actuales. Más allá de si la proyección de 2045 es correcta o no, lo que importa es el horizonte ideológico que propone: la tecnología como proceso autónomo, inevitable, que avanza con independencia de las decisiones humanas. Frente a eso, la discusión no sería si queremos ese futuro sino cómo nos adaptamos a él.
+
+Esta lógica tiene un nombre: transhumanismo. La idea de que la humanidad debe optimizarse tecnológicamente para superar sus limitaciones biológicas. Peter Thiel, fundador de Palantir y uno de los actores más influyentes del ecosistema tecnológico global, se define transhumanista. También es crítico de la democracia y defensor de la desregulación estatal. En 2025 se instaló en Argentina. Milei lo describió como "un anarcocapitalista que encuentra a un anarcocapitalista que está llevando las cosas a la realidad y que está funcionando." El dato no es menor. La agenda tecnológica que se implementa en las escuelas no ocurre en un vacío político. Ocurre en un momento en que quienes promueven esa agenda tienen intereses y posiciones ideológicas concretas.
+
+Desde una perspectiva marxista, el transhumanismo puede leerse como una forma específica de alienación: el trabajador intelectual, en este caso el docente, produce conocimiento pedagógico que las plataformas digitizan, procesan y eventualmente recombinen para ofrecer productos que compiten con el trabajo original. El saber docente se convierte en dato. El dato alimenta el algoritmo. El algoritmo genera una recomendación que aparece como si fuera neutral, técnica, objetiva. Nadie preguntó al docente si quería participar en ese proceso.
+
+Marc Prensky (2001) introdujo la distinción entre nativos digitales e inmigrantes digitales para describir la brecha entre quienes crecieron con la tecnología y quienes tuvieron que aprenderla de adultos. La metáfora tiene sus límites pero captura algo real: para las generaciones más jóvenes, ciertas discontinuidades tecnológicas no se perciben como rupturas porque nunca conocieron el antes. La singularidad, en ese sentido, ya ocurrió para ellos. El desafío pedagógico no es enseñarles a usar herramientas sino acompañarlos a pensar desde adentro de un entorno que dieron por dado desde el principio.
+
+
+IV. Las preguntas que el entusiasmo tecnológico descarta
+
+Hay algo que la narrativa del progreso tecnológico maneja con mucha eficiencia: el desplazamiento de las preguntas incómodas.
+
+¿Quién decide qué plataformas entran a las escuelas? ¿Bajo qué criterios se seleccionan? ¿Qué información recopilan sobre los estudiantes y adónde va? ¿Cuál es la diferencia entre una herramienta pedagógica y un producto comercial disfrazado de herramienta pedagógica? ¿Cuándo fue la última vez que a un docente se le consultó sobre la incorporación de una plataforma antes de que ya estuviera instalada?
+
+Dussel y Quevedo (2010, p. 13) hablaban de una "ventana de flexibilidad interpretativa" para describir ese momento, generalmente breve, en que una tecnología nueva todavía puede ser apropiada de maneras diversas, antes de que se estabilice un uso dominante. La incorporación de plataformas digitales en las escuelas porteñas lleva años. Esa ventana, en muchos casos, ya se cerró. Y se cerró sin que la discusión pedagógica hubiera ocupado el centro.
+
+No se trata de resistir la tecnología. Se trata de no confundir la velocidad de la implementación con la profundidad del debate.
+
+
+V. La sociedad del rendimiento y el docente que no puede parar
+
+Byung-Chul Han (2010, p. 7) describe la sociedad contemporánea como una sociedad del rendimiento: ya no operamos principalmente bajo la prohibición y el deber sino bajo el imperativo del poder. "Sí, puedo" reemplazó al "no debes". El resultado no es la liberación sino una forma nueva de sometimiento, más eficaz porque viene de adentro.
+
+El docente de hoy no solo tiene más herramientas. Tiene la sensación de que debería estar usando más herramientas, mejor y con más entusiasmo. Las capacitaciones en plataformas llegan sin créditos para la carrera pero con la presión implícita de que quien no se capacita se está quedando atrás. Google ofrece desde octubre de 2025 la certificación "Google Gemini Educator": un recorrido de formación en inteligencia artificial para docentes que no suma puntos al escalafón pero que circula en grupos de WhatsApp de directivos como si fuera indispensable. La Escuela Estación Buenos Aires fue declarada en 2026 la primera Google Reference School de Argentina, lo que significa que sus prácticas pedagógicas sirven de modelo de implementación de herramientas Google. El reconocimiento no viene del ministerio de educación. Viene de Google.
+
+Esta presión al rendimiento tecnológico produce algo que Han describe como agotamiento del yo. "El exceso de positividad se manifiesta como exceso de estímulos, informaciones e impulsos. Modifica radicalmente la estructura y economía de la atención" (Han, 2010, p. 7). Los docentes están cansados. No solo por las condiciones materiales del trabajo, que son graves, sino por este agotamiento específico: la sensación de que nunca alcanza, de que siempre hay una plataforma más que aprender, una metodología más que incorporar, un indicador más que completar.
+
+La autoexigencia es la forma más eficiente de control porque no necesita vigilancia externa. El docente que se queda hasta las once de la noche completando informes en AprendeBA no lo hace porque alguien lo obliga. Lo hace porque internalizó que eso es lo que se espera de un buen docente. La distinción entre dedicación profesional y sobreexplotación se vuelve difusa. Y cuando alguien pregunta cómo estás, la respuesta más honesta es la misma de siempre: nada, nada nuevo. Una jornada de trabajo, el celular, el WhatsApp del cole, las plataformas, el cansancio. Nada que merezca contarse porque ya es parte del paisaje.
+
+Hay un fenómeno paralelo que también viene del mismo lugar. La intolerancia al aburrimiento, que crece en docentes y estudiantes, no es una casualidad ni una debilidad personal. Es el resultado de una ingeniería masiva, sostenida y deliberada. Las corporaciones de la distracción, como las llamó una organización de activismo que surgió hace un par de años en Buenos Aires, necesitan de nuestra atención constante para generar renta. Fragmentan esa atención, la multiplican en estímulos breves, y hacen que cualquier actividad que requiera concentración sostenida parezca lenta, difícil, aburrida. Esto no afecta solo a los estudiantes. Afecta también a los docentes que intentan sostener esa concentración desde el otro lado del aula.
+
+
+VI. El caso GCBA y Google: lo que está en disputa
+
+En 2025, el Gobierno de la Ciudad de Buenos Aires firmó un contrato con Google para la provisión de servicios de Google Cloud Platform. El documento, identificado como PLIEG-2025-11117629-GCABA-DGIASINF, formaliza una relación que en la práctica ya existía desde hace años a través de distintas iniciativas educativas. El monto del contrato es millonario en dólares. La información es pública, está disponible en el portal de transparencia del GCBA, y sin embargo es casi desconocida para la mayoría de los docentes que usan las plataformas que ese contrato sostiene.
+
+Las cuentas @bue.edu.ar con las que los docentes y estudiantes de la Ciudad acceden a AprendeBA y a Google Classroom son, funcionalmente, cuentas de Google. Están bajo las condiciones de uso y la política de privacidad de Google Workspace for Education. Esa política establece que Google puede procesar datos de los usuarios para operar los servicios, incluyendo datos de uso, de interacción y de contenido generado dentro de la plataforma. Qué se hace con esos datos a largo plazo, cómo se cruzan con otros servicios de Google, qué margen tiene el GCBA para auditarlo: son preguntas cuyas respuestas están en los términos del contrato y no en las declaraciones de las autoridades educativas.
+
+Hay un antecedente internacional que vale la pena mirar. En 2015, Uruguay implementó a través del Plan Ceibal una integración con Google para sus escuelas. El rector de la Universidad de la República advirtió que "la soberanía de los países reside en la defensa del conocimiento" (LARED21, 2015). La discusión llegó al parlamento uruguayo. En Buenos Aires, la discusión no llegó ni al consejo escolar.
+
+Lo que sí llegó fue una resolución de la Legislatura porteña. La Resolución 200/2026, firmada por Clara Muzzio y Pablo Schillagi, le solicita al Poder Ejecutivo del GCBA que informe sobre la incorporación de Google Gemini en las escuelas. Diecinueve preguntas. ¿Qué datos recopila Gemini? ¿Con qué criterios se seleccionó? ¿Qué participación tuvieron los docentes? ¿Hay acuerdos de confidencialidad vinculados? El Poder Ejecutivo no respondió. La resolución existe, es pública, y el silencio también.
+
+La figura del "facilitador digital" o "facilitador tecnológico" que el GCBA introdujo en los últimos años como "pareja pedagógica" del docente es otra pieza de este rompecabezas. El facilitador gestiona las herramientas. No enseña el contenido. La distinción parece técnica pero no lo es: naturaliza la idea de que la relación con la tecnología es una competencia separada del acto de enseñar, que puede tercerizarse en otro rol. Y que el docente puede dedicarse a "lo pedagógico" mientras alguien más se ocupa de "lo digital", como si esos dos planos pudieran separarse sin pérdida.
+
+Todo esto importa porque la discusión no es técnica. Es política. Qué plataformas entran a las escuelas, bajo qué contratos, con qué datos, gestionadas por quiénes y con qué modelo pedagógico implícito: esas decisiones configuran condiciones de trabajo docente y trayectorias educativas de estudiantes. No tomarlas en serio porque "así funciona el mundo digital" es exactamente lo que las corporaciones necesitan que pensemos.
+
+
+VII. La singularidad pedagógica
+
+En matemáticas, una singularidad es un punto en que una función se comporta de manera que ninguna descripción local puede anticipar. Un punto de discontinuidad irreversible, donde las reglas que valían antes ya no alcanzan para describir lo que viene después.
+
+Kurzweil usa ese concepto para proyectar un futuro tecnológico. Quiero usarlo para algo más cercano.
+
+Hay un momento en que un chico o una chica aprende a leer. No es lineal ni gradual. Hay semanas de trabajo, de intentos, de confusión, de cansancio, y entonces algo pasa. La letra deja de ser un dibujo y se convierte en sonido. El sonido se combina con otro y produce una sílaba. La sílaba con otra produce una palabra. Y la palabra, de repente, tiene sentido. Ese momento no se puede deshacer. Una vez que alguien sabe leer, no puede volver a ver una letra como si fuera solo un trazo. El mundo se reorganizó. Eso es una singularidad pedagógica.
+
+No ocurre en todas las áreas con la misma intensidad. Pero ocurre. Hay momentos de aprendizaje que reorganizan al que aprende de manera irreversible, que cambian la forma en que percibe, en que entiende, en que puede relacionarse con el mundo. Y esos momentos no ocurren solos. Ocurren en relación con alguien que los sostiene, que los habilita, que conoce al estudiante suficientemente bien como para saber cuándo empujar y cuándo esperar.
+
+Ningún algoritmo, por sofisticado que sea, tiene esa información. No porque la tecnología sea mala sino porque esa información no es procesable como dato: está en el vínculo, en la historia compartida, en el conocimiento acumulado de cómo este estudiante en particular aprende y qué necesita en este momento. El paradigma centauro, que propone la colaboración humano-máquina donde el humano dirige y la máquina amplifica, tiene sentido en muchos contextos. Pero hay algo que en la singularidad pedagógica no puede amplificarse ni delegarse: la presencia de quien enseña.
+
+Esto no es nostalgia. Es una descripción de lo que hace la docencia que las métricas de rendimiento y las plataformas de gestión no pueden capturar porque no saben que existe.
+
+
+VIII. La pedagogía de la pausa
+
+Hace unos meses, en Buenos Aires, una organización que se llama "Yihad contra las Corporaciones de la Distracción" empapelando paradas de colectivo y avenidas porteñas con afiches anónimos. Cada uno tenía un código QR con una recomendación de lectura o una reflexión. Los mensajes eran directos: "Sos adicto a Twitter, pelotudo." "¿Cuántos TikTok vas a ver hoy?" Después organizaron una marcha de treinta personas disfrazadas de Gandalf hacia la casa de Peter Thiel, el transhumanista instalado en Argentina que cree que el homo sapiens necesita ser reemplazado por algo mejor. En el camino se detuvieron frente a la estatua de San Martín y entonaron la Marcha de San Lorenzo. Se cruzaron casualmente con un regimiento de granaderos. Nadie sacó una selfie. Fueron los vecinos los que viralizaron la escena a nivel internacional.
+
+Esta organización se junta todos los lunes. Y cada encuentro arranca de la misma manera: quince minutos de aburrimiento colectivo. Sin celulares, sin pantallas, sin agenda. Recién después se discute el temario.
+
+El aburrimiento compartido como forma de hacer política.
+
+Esa imagen me parece útil para pensar la pedagogía de la pausa, no como una técnica didáctica sino como una posición. Frente a monopolios que necesitan de nuestra atención constante para generar renta, una propuesta que recupera el tiempo compartido sin rendimiento inmediato es una forma de resistencia. No porque lo analógico sea mejor que lo digital: ambos mundos tienen cosas que no pueden reemplazarse mutuamente. Sino porque la aceleración no es neutral y no debería aplicarse igual a todos los contextos.
+
+La escuela tiene algo que los ambientes digitales no pueden ofrecer: tiempo de presencia compartida que no está fragmentado por notificaciones, que no está optimizado por un algoritmo, que no está siendo registrado para mejorar un producto. Ese tiempo tiene un valor pedagógico que no aparece en ninguna métrica porque no es medible en los términos en que las plataformas miden las cosas.
+
+La pedagogía de la pausa no propone que los docentes ignoren las plataformas ni que reivindiquen un pasado mejor. Propone que no entreguemos sin discusión la organización del tiempo escolar a una lógica que tiene otros intereses. Que el aula pueda ser un espacio donde todavía sea posible hacer nada, o algo que parezca nada, durante el tiempo necesario para que algo importante ocurra. Que la concentración sostenida, el aburrimiento productivo, el silencio pensante no sean experiencias que la escuela tenga que pedir disculpas por sostener.
+
+Porque si hay un lugar donde la intolerancia al aburrimiento todavía puede trabajarse, donde todavía es posible enseñar a estar con la propia atención sin fragmentarla, ese lugar es el aula. No porque los docentes sean mejores que las plataformas. Sino porque tienen algo que las plataformas no tienen: la posibilidad de conocer a ese estudiante en particular, en este momento, y saber para qué sirve la pausa.
+
+
+IX. En defensa de lo que no se mide
+
+La discusión sobre tecnología y educación suele plantearse en términos de eficiencia. Las plataformas prometen hacer el trabajo más rápido, más accesible, más medible. Los indicadores se multiplican. Los informes también. La sensación de control aumenta.
+
+Pero la eficiencia no es un valor neutral. Depende de qué se decide medir y qué se deja fuera. Y lo que las plataformas de gestión educativa dejan fuera es, justamente, lo más difícil de sustituir: el vínculo, el conocimiento acumulado sobre el otro, la capacidad de leer una situación que no encaja en ningún formulario, la pausa que a veces es más formativa que cualquier actividad.
+
+Los docentes porteños, como los de cualquier sistema educativo, trabajan en condiciones que muchas veces no les permiten hacer todo lo que saben hacer. Eso es un problema real, y la tecnología puede ayudar a resolverlo en algunos aspectos. Pero hay una diferencia entre usar la tecnología para ampliar lo que se puede hacer y dejar que la lógica de las plataformas redefina qué cuenta como trabajo docente válido.
+
+La singularidad pedagógica que describimos antes no tiene backend. No genera datos procesables. No mejora el dashboard de ninguna plataforma. Ocurre en el espacio entre dos personas, y deja una huella que ningún sistema de alerta temprana puede registrar.
+
+Eso no significa que sea invisible. Significa que requiere otro tipo de atención para verla.
+
+La disputa, entonces, no es entre tecnología y humanismo. Es por quién define los términos en que la tecnología ingresa a las escuelas, qué queda adentro y qué queda afuera, qué se considera trabajo y qué no. Los docentes tenemos algo para decir sobre eso. Y decirlo, en este momento, es parte de la tarea.
+
+
+Referencias
+
+Dussel, I. y Quevedo, L. A. (2010). *Educación y nuevas tecnologías: los desafíos pedagógicos ante el mundo digital*. Santillana.
+
+Google LLC. (2026). *Google Workspace for Education Privacy Notice*. https://workspace.google.com/terms/education_privacy.html
+
+Gobierno de la Ciudad de Buenos Aires. (2025). *Licitación PLIEG-2025-11117629-GCABA-DGIASINF: Contratación de servicios Google Cloud Platform*. Portal de Contrataciones del GCBA.
+
+Han, B.-C. (2010). *La sociedad del cansancio*. Herder.
+
+Kurzweil, R. (2005). *The Singularity Is Near: When Humans Transcend Biology*. Viking.
+
+LARED21. (2015, 17 de agosto). *Uruguay: Ceibal y Google, la polémica por los datos de los estudiantes*. https://www.lr21.com.uy/
+
+Legislatura de la Ciudad Autónoma de Buenos Aires. (2026). *Resolución 200/2026*. Firmada por Clara Muzzio y Pablo Schillagi.
+
+Linne, J. (2023). *Tiempo de pantalla*. Planeta.
+
+Prensky, M. (2001). Digital natives, digital immigrants. *On the Horizon*, 9(5), 1-6.
+
+Rikap, C. (2026). *Teoría de la dependencia digital*. Siglo XXI.
+
+Srnicek, N. (2018). *Capitalismo de plataformas*. Caja Negra.
