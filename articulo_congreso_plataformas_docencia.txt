@@ -2,9 +2,13 @@ La singularidad que no nos contempla: plataformas, rendimiento y la irreductible
 
 Ignacio Domínguez
 
-Resumen
+Abstract
 
-Este artículo propone pensar al docente no como un usuario externo de las plataformas digitales sino como alguien ya inmerso en ellas, afectado por la misma lógica que atraviesa al conjunto de la sociedad. A partir de una lectura crítica del capitalismo de plataformas (Srnicek, 2018) y de la sociedad del rendimiento (Han, 2010), se analiza la singularidad tecnológica (Kurzweil, 2005) como proyecto ideológico y su tensión con lo que aquí llamamos singularidad pedagógica: ese momento irreversible en que algo se reorganiza en el que aprende. Frente a la velocidad como mandato, se propone una pedagogía de la pausa como posición política. El artículo incluye un análisis de la relación entre el Gobierno de la Ciudad de Buenos Aires y Google como caso concreto de lo que está en disputa.
+Las plataformas digitales no son el entorno de trabajo de los docentes. Son el entorno de vida de los docentes. Antes de dar una clase, ya pasamos horas navegando la misma lógica que atraviesa a nuestros estudiantes: la fragmentación de la atención, la presión al rendimiento constante, la sensación de que el tiempo que no produce nada visible es tiempo perdido. Entender esto es el punto de partida.
+
+Este artículo propone pensar la incorporación de plataformas en las escuelas desde adentro de ese contexto. No se trata de decidir si usar o no tecnología: nuestros estudiantes ya están adentro, y nosotros también. La pregunta es otra. ¿Quién define los términos en que la tecnología ingresa a las aulas? ¿Qué datos se extraen, con qué contratos, hacia dónde van? ¿Qué queda fuera de lo que las métricas pueden medir? Para responderlas, se analiza la relación concreta entre el Gobierno de la Ciudad de Buenos Aires y Google, y se desarrolla el concepto de singularidad pedagógica: ese momento irreversible en que algo se reorganiza en el que aprende, y que ningún sistema de gestión puede registrar porque no sabe que existe.
+
+Frente a la velocidad como mandato y al rendimiento como único horizonte, este artículo propone la pedagogía de la pausa como posición política. No como nostalgia ni como rechazo de lo digital, sino como decisión sobre el tiempo escolar: recuperar las condiciones en que ocurre lo que más importa de enseñar.
 
 Palabras clave: plataformas digitales, trabajo docente, singularidad pedagógica, pedagogía de la pausa, capitalismo de plataformas.
 
