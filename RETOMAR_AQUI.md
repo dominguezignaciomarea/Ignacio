@@ -36,6 +36,12 @@ Pendiente: terminar las placas que faltan, y conseguir del usuario las fotos rea
 
 ---
 
+## Proyecto D — Estéticas UTE AMBIENTE, BRÚJULA y Mariano Acosta
+
+**Estado: no iniciado. Prioridad principal del usuario.** Ver **`PLAN_ESTETICAS_Y_DISENO.md`**. Otros archivos de contexto: `GUIA_USO_CLAUDE_CODE.md`, `UTE_AMBIENTE_brand_check_carrusel_reciclado.md`.
+
+---
+
 ## Advertencia sobre el conector de Canva
 
 Si las herramientas `mcp__Canva__*` no aparecen en la sesión, **reconectar Canva no alcanza**: el listado de herramientas MCP se congela al iniciar la sesión. Hay que reconectar y después **abrir una sesión nueva**.
