@@ -53,3 +53,17 @@ Puntos detectados al leer el repo, a confirmar por el usuario antes de publicar:
 - **Clase 2**: "157 proyectos, equivalentes a 4.966 GW". En notación argentina "4.966" se lee como cuatro mil novecientos sesenta y seis GW, lo cual es imposible para Argentina; probablemente sea **4.966 MW** (≈ 5 GW). Además, la suma del desglose (1.242 + 427 + 38 + 7 = 1.714 MW) no coincide con el total: conviene aclarar que el desglose es de proyectos en operación u otro subconjunto, según la fuente (Burgos, 2020).
 - **Clase 2**: el Acuerdo de París fue **adoptado el 12/12/2015** y abierto a la firma el 22/04/2016; conviene mencionar ambas fechas.
 - **Carrusel reciclado**: las cifras "de 41 a 21 puntos verdes" y "más de 6.000 familias", y la atribución de dichos a Jorge Macri, provienen de un reel. Recomendable respaldarlas con una fuente primaria (datos del GCBA, cooperativas, nota periodística con cita textual) y citarla en la placa o en el texto de la publicación.
+
+## 5. Actualización (2026-09-30, misma sesión): Canva conectado y herramientas nuevas
+
+Corrige y amplía lo dicho en la sección 2:
+
+- **Canva ya está conectado y activo** (conector oficial de claude.ai). Google Drive también.
+- El conector de Canva **cambió sus herramientas**. Las viejas (`start-editing-transaction`, `perform-editing-operations`, `commit-editing-transaction`, `get-design-content`) ya no aparecen; ahora hay:
+  - `read-design` (leer contenido) y `edit-design` (una sola herramienta que aplica cambios, guarda o descarta). Permite: reemplazar/formatear texto (color, tamaño, negrita, alineación), mover, redimensionar, recortar, rotar y voltear elementos, cambiar imágenes/videos, insertar formas SVG (útil para las "olas"), agregar y reordenar páginas, **escribir notas del orador**, agrupar, cambiar opacidad y capas.
+  - `generate-image`: **genera imágenes con IA dentro de Canva** (corrige lo dicho antes: sí se pueden generar ilustraciones o imágenes, vía Canva). Para fotos documentales de hechos reales (cartoneros/as, funcionarios, cooperativas) siguen conviniendo fotos reales, por veracidad.
+  - `remove-background`, `separate-image-layers`, `resize-design` (adaptar a post/historia/16:9), `export-design` (PNG/PDF/MP4 según el diseño), `create-upload-url` (subir archivos), `autofill-design` y plantillas de marca (`search-brand-templates`, `create-design-from-brand-template`), `list-brand-kits`, comentarios (`list-comments`, `reply-to-comment`), carpetas (`create-folder`, `search-folders`).
+- **Límites que siguen**: no elige fuentes desde el conector (el formato de texto no incluye familia tipográfica: la fuente sale de la plantilla), no aplica animaciones ni transiciones, no edita línea de tiempo de video, y cada guardado requiere tu aprobación del preview.
+- **Kit de marca / plantillas de marca** (Canva Pro/Teams/Educación): permiten que Claude cree piezas nuevas ya con logo, colores y tipografías de UTE AMBIENTE sin diseñar desde cero.
+- **Plugin recomendado**: "Canva" (autor: Canva, catálogo Knowledge Work de Anthropic). Suma skills: edición de diseños, creación en lote, adaptación a redes, chequeo de marca, feedback de diseño y aplicación de feedback.
+- **Permisos**: `.claude/settings.json` autoriza los nombres viejos de herramientas; conviene agregar los nuevos (`mcp__Canva__edit-design`, `mcp__Canva__read-design`, etc.) para evitar pedidos de aprobación.
