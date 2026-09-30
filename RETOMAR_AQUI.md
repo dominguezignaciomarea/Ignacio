@@ -9,6 +9,7 @@ Este archivo existe para que una sesión nueva de Claude Code pueda continuar si
 ## Contexto permanente (leer siempre)
 
 - **`UTE_AMBIENTE_guia_de_estilo.md`** — identidad visual completa de UTE AMBIENTE: logo, paleta, tipografías, tono, recursos gráficos, formatos habituales, IDs de diseños de referencia en Canva.
+- **`GUIA_USO_CLAUDE_CODE.md`** — qué puede y qué no puede hacer Claude Code en estas tareas, recomendaciones para ahorrar tiempo y observaciones de rigor pendientes sobre el material.
 
 ## Reglas fijas del usuario (no romper)
 
