@@ -123,3 +123,8 @@ Nota: el formato de URL que funciona para Drive es `https://lh3.googleuserconten
 - Confirmar con `get-design-pages` que las 7 piezas tienen el contenido correcto.
 - Confirmar que las 7 piezas están dentro de la carpeta AMBIENTE (`FAFG4tqJkw8`) con `list-folder-items`.
 - Borrar o avisar sobre el archivo de prueba redundante `DAHMwvyNQnw` (copia de portada vieja, no se usa).
+
+## Actualización 2026-09-30
+- El carrusel quedó armado por el usuario en un único diseño de 7 páginas: **`DAHNmVHj07w`** ("Crisis de reciclado en caba", carpeta AMBIENTE), con textos distintos al guion de arriba.
+- Los IDs de placas sueltas `DAHMwsPqHR8`, `DAHMwsdUmvo`, `DAHMwnd5LvI`, `DAHMwmGHT1k`, `DAHMwir1jn4` ya no existen en Canva. `DAHMw8cgQnQ` y `DAHMw9u6AbU` siguen existiendo pero son restos de prueba (uno aún tiene el texto de "Lecturas infantiles").
+- Chequeo de marca y pendientes de rigor: ver `UTE_AMBIENTE_brand_check_carrusel_reciclado.md`.
