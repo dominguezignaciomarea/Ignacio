@@ -69,3 +69,42 @@ Gestión de residuos y reciclaje, recicladores/cartoneros urbanos (cooperativas)
 - Copia de Ecoambientalismo (`DAHDkIFbi-I`)
 - ¡ES HORA DE LEVANTARSE, QUERIDO! (`DAHMAcluKjE`)
 - Copia de Copia de r (`DAHC6jFXsZ0`)
+
+---
+
+## Ampliación técnica (2026-10-01) — datos extraídos de Canva
+
+Fuente: lectura de elementos con `read-design` del carrusel **"Crisis de reciclado en CABA" `DAHNmVHj07w`** (págs. 1 y 3, 1080×1350). Valores exactos salvo lo marcado **[inferido]**. Complementa lo anterior; no lo reemplaza.
+
+### Colores confirmados en piezas
+- Verde Hoja `#4bae4f` (coincide con el manual): franjas sobre foto, opacidad **0.52** (franja fina de título, alto 85 px) y **0.82** (bloques de texto, altos 192–291 px), de borde a borde (más anchas que la página).
+- Fondo de página `#000000` debajo de la foto.
+- Texto sobre franja: `#ffffff`.
+
+### Tipografías (fontRef)
+| Uso | fontRef | Peso | Tamaño | Otros |
+|---|---|---|---|---|
+| Línea de título sobre franja (MAYÚSCULAS) | `YAFdJjbTu24,1` | semibold | 38 px | interlineado 1.4 · letterSpacing −0.068 |
+| Cuerpo de texto | `YAFdJjbTu24,1` | bold | 32 px | interlineado 1.4 · alineado a la izquierda |
+| Título "bubble" con contorno | — | — | — | el conector lo devuelve como elemento **"unsupported"** (texto con efecto): **no se puede leer ni editar por API**; se edita a mano en Canva |
+- Nombre visual de `YAFdJjbTu24,1` **[inferido]**: sans tipo Poppins/Montserrat (no confirmado; el `,1` indica una variante de la familia).
+
+### Recursos gráficos (asset IDs)
+| Recurso | Asset ID | Posición típica (1080×1350) |
+|---|---|---|
+| Logo UTE AMBIENTE | `MAG7HP4AnGY` | 289×289, top 1065, left 396 (centrado abajo) |
+| Papel rasgado (arriba y abajo, misma imagen) | `MAE0kygyIHE` | 2147×585; arriba top −389 / left −543; abajo top 1165 / left −434 |
+| Textura superior pág. 1 | `MAFvW5ALujQ` | — |
+| Viñeta (ícono de lista) | `MAEKu1Khuow` | 45×46, left 28 |
+| Sticker/ilustración inclinada | `MAHEIJp0cyc` | 259×233, rotación 5.7°, abajo a la derecha |
+| Fotos B/N del carrusel | `MAHVkbprWPs` (op. 0.95), `MAHNs6vwtRs` (op. 0.78) | a sangre |
+
+### Grilla — post/carrusel 1080×1350
+- Margen izquierdo del texto: **50 px** (párrafo) / **86 px** (con viñeta en 28 px).
+- Ancho de texto: 970–1006 px.
+- Zona del logo: últimos ~285 px (y > 1065) reservados para logo + papel rasgado.
+- Zona superior: ~200 px ocupados por papel rasgado.
+
+### Kit de marca y plantillas
+- La cuenta tiene **un solo kit de marca: `kAGUgARGMCU`** (el conector no muestra su nombre ni su contenido).
+- **No hay plantillas de marca (Brand Templates)** en la cuenta (`search-brand-templates` vacío, 2026-10-01).
