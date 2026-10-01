@@ -18,7 +18,30 @@
       "mcp__Canva__get-design-content",
       "mcp__Google_Drive__read_file_content",
       "mcp__Google_Drive__get_file_metadata",
-      "mcp__Google_Drive__search_files"
+      "mcp__Google_Drive__search_files",
+      "mcp__Canva__read-design",
+      "mcp__Canva__edit-design",
+      "mcp__Canva__search-folders",
+      "mcp__Canva__get-assets",
+      "mcp__Canva__list-brand-kits",
+      "mcp__Canva__search-brand-templates",
+      "mcp__Canva__get-export-formats",
+      "mcp__Canva__export-design",
+      "mcp__Canva__resize-design",
+      "mcp__Canva__create-folder",
+      "mcp__Canva__create-upload-url",
+      "mcp__Canva__generate-image",
+      "mcp__Canva__get-generate-image-job",
+      "mcp__Canva__create-design",
+      "mcp__Canva__get-create-design-async-job",
+      "mcp__Canva__autofill-design",
+      "mcp__Canva__get-design-dataset",
+      "mcp__Canva__list-comments",
+      "mcp__Canva__list-replies",
+      "mcp__Canva__resolve-shortlink",
+      "mcp__Canva__help",
+      "WebSearch",
+      "WebFetch"
     ]
   }
 }

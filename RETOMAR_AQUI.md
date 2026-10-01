@@ -53,3 +53,7 @@ Comprobación rápida: buscar `mcp__Canva__get-design`. Si devuelve "No matching
 ## Actualización de reglas (2026-10-01, pedido del usuario)
 - Para el Proyecto D el usuario pidió **trabajar de forma autónoma**: avanzar entre fases y guardar sin pedir confirmación, mostrando vistas previas y un resumen al final. Esto amplía la regla 4 (pausar por fase) para este proyecto.
 - Sigue vigente: **consultar antes de borrar diseños**; no inventar datos y marcar lo no verificado.
+
+## Permisos (2026-10-01)
+- Con autorización explícita del usuario se actualizó `.claude/settings.json`: se **agregaron** los nombres actuales de las herramientas de Canva (`read-design`, `edit-design`, `export-design`, etc.) y `WebSearch`/`WebFetch` para verificar fuentes. Los nombres viejos se conservaron.
+- Siguen sujetos a consulta: borrar diseños (regla del usuario).
