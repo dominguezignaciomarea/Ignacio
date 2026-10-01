@@ -87,3 +87,11 @@ Plantilla de referencia vigente: **"La larga agonía de la Argentina progresista
 - Hex exacto del celeste del marco y de la barra (son imágenes; el único hex celeste confirmado es `#7dd0e2`).
 - Kit de marca: la cuenta tiene un solo kit (`kAGUgARGMCU`), no se sabe si incluye BRÚJULA.
 - No hay plantillas de marca (Brand Templates) en la cuenta.
+
+## Plantilla maestra (Fase 2, 2026-10-01)
+- **MAESTRO – BRÚJULA – Post 4:5 (1080×1350)** · `DAHWyuSMqs8` · carpeta Estética `FAHHPFy6rWA` · copia de `DAHTf1sxehI` (el original no se tocó).
+  - Edición: https://www.canva.com/d/6aD8OaKjwZOQZpr
+- Campos de autofill etiquetados: **`titulo`** (`PBKhR9GBpRNp1gnk-LBTKLV2vHNzNTSgf`), **`firma`** (`PBKhR9GBpRNp1gnk-LBGnryMRGHDwjbRK`), **`foto`** (`PBKhR9GBpRNp1gnk-LBzjzTtq4d9ghFjv`).
+- Corrección de diseño aplicada: el título quedó **anclado abajo** (`update_text_anchoring: end`). Motivo: en la vista previa, un título de 3 líneas crecía hacia abajo y **pisaba la firma**. Ahora crece hacia arriba, sobre la foto.
+- Regla de uso: título de **hasta 2 líneas** a 84 px (~22 caracteres por línea **[estimado a partir de la vista previa]**); si tiene 3, revisar que no tape lo importante de la foto.
+- Cómo usarla: `copy-design` de `DAHWyuSMqs8` → reemplazar `titulo`, `firma` y la imagen `foto` → mover a la carpeta `2026` (`FAHHPBMmt-k`).

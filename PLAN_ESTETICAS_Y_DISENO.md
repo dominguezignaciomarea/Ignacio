@@ -41,4 +41,4 @@ Hallazgos transversales:
 - Método de lectura: `read-design` sin transacción devuelve solo texto plano; para formato hace falta `open_transaction: true` y luego `cancel`. El conector se desconectó varias veces en la sesión: las transacciones abiertas se pierden (sin efecto, porque no había cambios).
 
 Pendiente de Fase 1: carruseles de entrevista de BRÚJULA y historia 9:16; revista TARDE Y MAÑANA y piezas de elecciones; más piezas de UTE (historias, flyer A4, 16:9).
-Siguiente: **Fase 2 — plantillas maestras** (copiar una pieza vigente por marca/formato y etiquetar campos).
+Siguiente: **Fase 2 — plantillas maestras**. Hecho: BRÚJULA post 4:5 (`DAHWyuSMqs8`, ver guía). Pendiente: UTE AMBIENTE (carrusel, historia, flyer) y Mariano Acosta (tras confirmar piezas).
