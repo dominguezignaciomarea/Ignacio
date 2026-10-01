@@ -26,3 +26,19 @@ Pedido → guion (con fuentes verificadas) → copia del maestro → reemplazo d
 - Presentación docente de 16 placas: `UTE_AMBIENTE_presentacion_docente_SPEC.md` (sin iniciar).
 - Clase 2: errores de fecha/unidades listados en `GUIA_USO_CLAUDE_CODE.md`, sección 4.
 - Limpiar diseños de prueba viejos `DAHMw8cgQnQ` y `DAHMw9u6AbU` (consultar antes de borrar).
+
+## Avance (2026-10-01)
+**Fase 1 — hecha en primera pasada.** Guías:
+- `UTE_AMBIENTE_guia_de_estilo.md` → ampliada con sección "Ampliación técnica" (hex, fontRef, asset IDs, grilla 1080×1350).
+- `BRUJULA_guia_de_estilo.md` → nueva (carpeta `FAHEk-7xzLg`, subcarpeta Estética `FAHHPFy6rWA`; plantilla vigente `DAHTf1sxehI`).
+- `MARIANO_ACOSTA_guia_de_estilo.md` → nueva (no hay carpeta propia; piezas identificadas por contenido: `DAHUo1iXNX4`, `DAHV3G3xrpw`). **Confirmar con el usuario.**
+
+Hallazgos transversales:
+- Kit de marca: hay **uno solo** (`kAGUgARGMCU`); no hay Brand Templates.
+- El conector **no devuelve el nombre de la fuente**, solo `fontRef`. Los nombres en las guías están marcados [inferido].
+- `YAFdJjbTu24,1` se usa en UTE AMBIENTE y en el Acosta (cuerpo).
+- Los títulos "bubble" de UTE salen como elemento `unsupported`: no se pueden leer ni editar por API.
+- Método de lectura: `read-design` sin transacción devuelve solo texto plano; para formato hace falta `open_transaction: true` y luego `cancel`. El conector se desconectó varias veces en la sesión: las transacciones abiertas se pierden (sin efecto, porque no había cambios).
+
+Pendiente de Fase 1: carruseles de entrevista de BRÚJULA y historia 9:16; revista TARDE Y MAÑANA y piezas de elecciones; más piezas de UTE (historias, flyer A4, 16:9).
+Siguiente: **Fase 2 — plantillas maestras** (copiar una pieza vigente por marca/formato y etiquetar campos).

@@ -38,7 +38,7 @@ Pendiente: terminar las placas que faltan, y conseguir del usuario las fotos rea
 
 ## Proyecto D — Estéticas UTE AMBIENTE, BRÚJULA y Mariano Acosta
 
-**Estado: no iniciado. Prioridad principal del usuario.** Ver **`PLAN_ESTETICAS_Y_DISENO.md`**. Otros archivos de contexto: `GUIA_USO_CLAUDE_CODE.md`, `UTE_AMBIENTE_brand_check_carrusel_reciclado.md`.
+**Estado: Fase 1 hecha en primera pasada (2026-10-01). Prioridad principal del usuario.** Ver **`PLAN_ESTETICAS_Y_DISENO.md`** (sección "Avance") y las guías `BRUJULA_guia_de_estilo.md`, `MARIANO_ACOSTA_guia_de_estilo.md` y `UTE_AMBIENTE_guia_de_estilo.md`. Otros archivos de contexto: `GUIA_USO_CLAUDE_CODE.md`, `UTE_AMBIENTE_brand_check_carrusel_reciclado.md`.
 
 ---
 
@@ -47,3 +47,9 @@ Pendiente: terminar las placas que faltan, y conseguir del usuario las fotos rea
 Si las herramientas `mcp__Canva__*` no aparecen en la sesión, **reconectar Canva no alcanza**: el listado de herramientas MCP se congela al iniciar la sesión. Hay que reconectar y después **abrir una sesión nueva**.
 
 Comprobación rápida: buscar `mcp__Canva__get-design`. Si devuelve "No matching deferred tools found", las herramientas no están cargadas.
+
+---
+
+## Actualización de reglas (2026-10-01, pedido del usuario)
+- Para el Proyecto D el usuario pidió **trabajar de forma autónoma**: avanzar entre fases y guardar sin pedir confirmación, mostrando vistas previas y un resumen al final. Esto amplía la regla 4 (pausar por fase) para este proyecto.
+- Sigue vigente: **consultar antes de borrar diseños**; no inventar datos y marcar lo no verificado.
