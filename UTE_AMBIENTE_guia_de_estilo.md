@@ -108,3 +108,13 @@ Fuente: lectura de elementos con `read-design` del carrusel **"Crisis de recicla
 ### Kit de marca y plantillas
 - La cuenta tiene **un solo kit de marca: `kAGUgARGMCU`** (el conector no muestra su nombre ni su contenido).
 - **No hay plantillas de marca (Brand Templates)** en la cuenta (`search-brand-templates` vacío, 2026-10-01).
+
+### Plantilla maestra (Fase 2, 2026-10-01)
+- **MAESTRO – UTE AMBIENTE – Carrusel 4:5 (portada + placa de texto)** · `DAHWywHcTwY` · carpeta AMBIENTE `FAFG4tqJkw8` · copia de las págs. 1 y 3 de `DAHNmVHj07w` (original intacto).
+  - Edición: https://www.canva.com/d/amUhSnSsfE3GCPR
+- Campos de autofill: pág. 1 → `portada_bajada`, `portada_foto`; pág. 2 → `placa_puntos`, `placa_parrafo`, `placa_foto`.
+- **Los títulos "bubble" (portada y placa) NO se pueden cambiar por el conector**: hay que editarlos a mano en Canva (doble clic sobre el título). Es el único paso manual.
+- Aprendizajes técnicos:
+  - Al copiar páginas sueltas (`copy-design` con `page_numbers`), **cambian los IDs de página**; los IDs de elementos se mantienen. Hay que releer el diseño antes de editar.
+  - Al reemplazar un texto de varias líneas, Canva puede **agregar viñetas de lista solas**: se corrige con `format_text` → `list_level: 0`.
+  - Las cruces (`MAEKu1Khuow`) son imágenes sueltas en posiciones fijas (top 538 / 584 / 667): si cambia la cantidad de líneas de cada punto, hay que reubicarlas.

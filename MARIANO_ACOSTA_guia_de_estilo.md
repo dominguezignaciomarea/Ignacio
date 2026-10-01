@@ -2,7 +2,9 @@
 
 Relevamiento técnico del 2026-10-01 con `read-design`. Valores hex, `fontRef`, tamaños, posiciones e IDs **extraídos de Canva**. Lo marcado **[inferido]** sale de las miniaturas, sin verificar.
 
-> **A confirmar con el usuario**: no existe una carpeta "Mariano Acosta" en Canva. Las piezas se identificaron por su contenido. Si hay una carpeta específica (o si las piezas de "TARDE Y MAÑANA" y "Elecciones Delegadxs" pertenecen a otra marca), indicarlo para ajustar.
+> **Confirmado por el usuario (2026-10-01)**: el Mariano Acosta **no tiene carpeta propia** en Canva; las piezas se identifican por contenido. *(Sigue pendiente: si "TARDE Y MAÑANA" y "Elecciones Delegadxs" usan esta estética.)*
+>
+> Nota original: no existe una carpeta "Mariano Acosta" en Canva. Las piezas se identificaron por su contenido. Si hay una carpeta específica (o si las piezas de "TARDE Y MAÑANA" y "Elecciones Delegadxs" pertenecen a otra marca), indicarlo para ajustar.
 
 ## Identidad (datos que aparecen en las piezas)
 - **Escuela Normal Superior en Lenguas Vivas Nº 02 "Mariano Acosta"** (ENS Nº 2). Escudo: **"ACOSTA – ENP – 1874"**.
@@ -70,3 +72,10 @@ Relevamiento técnico del 2026-10-01 con `read-design`. Valores hex, `fontRef`, 
 ## Pendientes
 - Leer la revista TARDE Y MAÑANA (portada e interiores) y las piezas de elecciones para ver si comparten el sistema.
 - Confirmar nombres de fuentes en Canva.
+
+## Plantilla maestra (Fase 2, 2026-10-01)
+- **MAESTRO – MARIANO ACOSTA – Post evento 4:5 (1080×1350)** · `DAHWy1K7zKM` · en la raíz de Canva (el Acosta no tiene carpeta propia) · copia de `DAHUo1iXNX4` (original intacto).
+  - Edición: https://www.canva.com/d/z2SgEHfQuDml-ej
+- Campos de autofill: `palabra_grande`, `volanta`, `fecha_hora`, `dato`, `lugar`, `aclaracion`, `foto_fondo`.
+- Regla de uso: `palabra_grande` de **hasta ~7 letras** (a 550 px, "ASADOOO" ocupa casi todo el ancho; "EVENTO" entra holgado). Para palabras más largas, bajar el tamaño.
+- El ícono central del pie (parrilla `MAHCYBd5LPw`) es temático: reemplazarlo según el evento.

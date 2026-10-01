@@ -33,7 +33,7 @@ Relevamiento técnico hecho el 2026-09-30/10-01 leyendo los diseños de Canva co
   | Sello "B" 3D negro sobre celeste, con aguja | `MAHHPCAcd8s` | — |
   | Sello "Brújula Informativa" (oscuro, 3D) | `MAHHy3ZqV4w` | — |
   | Sello "Brújula Informativa" (variantes plateado/negro) | `MAHHy8EtCsk`, `MAHHyxYf8N0` | — |
-- **[a confirmar con el usuario]** cuál de los sellos es el vigente: el diseño se llama "Sello nuevo", pero las placas 2026 relevadas no muestran el wordmark completo, solo la aguja y la URL.
+- **Respuesta del usuario (2026-10-01): todos los sellos son válidos; se elige según lo que la pieza necesite.** (Nota original: no estaba claro cuál de los sellos era el vigente: el diseño se llama "Sello nuevo", pero las placas 2026 relevadas no muestran el wordmark completo, solo la aguja y la URL.)
 
 ## Paleta (valores extraídos)
 | Rol | Hex | Dónde aparece |
