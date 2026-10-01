@@ -45,4 +45,4 @@ Comprobación rápida: buscar `mcp__Canva__get-design`. Si devuelve "No matching
 
 ## Proyecto D — Carrusel BRÚJULA "La singularidad educativa"
 
-**Estado: fase 1 (portada de prueba) hecha, esperando aprobación.** Ver **`BRUJULA_carrusel_singularidad_educativa.md`**: tiene el guion aprobado, la identidad BRÚJULA relevada en Canva y los IDs de diseño.
+**Estado: terminado.** Las 9 placas están guardadas en Canva (`DAHWzAhOGes`, carpeta BRÚJULA). Ver **`BRUJULA_carrusel_singularidad_educativa.md`**: tiene el guion aprobado, la identidad BRÚJULA relevada en Canva y los IDs de diseño.
