@@ -46,3 +46,16 @@ Comprobación rápida: buscar `mcp__Canva__get-design`. Si devuelve "No matching
 ## Proyecto D — Carrusel BRÚJULA "La singularidad educativa"
 
 **Estado: terminado.** Las 9 placas están guardadas en Canva (`DAHWzAhOGes`, carpeta BRÚJULA). Ver **`BRUJULA_carrusel_singularidad_educativa.md`**: tiene el guion aprobado, la identidad BRÚJULA relevada en Canva y los IDs de diseño.
+
+---
+
+## Proyecto E — Kit de marca BRÚJULA (PDF)
+
+**Estado: terminado (v1.0).** Carpeta `BRUJULA_kit_de_marca/`:
+- `BRUJULA_kit_de_marca.pdf`: 15 páginas en 16:9.
+- `kit.html` es la fuente. Para regenerar el PDF: renderizarlo con Playwright/Chromium (`page.pdf`, 1920×1080, `printBackground`).
+- `fonts/`: Google Fonts locales (Chromium no las baja a través del proxy).
+- `assets/`: recortes de las miniaturas reales de Canva (baja resolución).
+- Colores base medidos píxel a píxel sobre las miniaturas. Tipografías base identificadas visualmente (Montserrat con alta confianza; Bebas Neue y Fira Sans a confirmar).
+- Nuevo: paleta extendida (Tinta noche #0E1A22, Petróleo #0F4C5C, Papel #F2EDE4, Niebla #8A9BA5), Newsreader e IBM Plex Mono, aguja-señal, placa de cita, ficha de dato con fuente, dial como trama, tabla de contraste WCAG y checklist.
+- Pendiente sugerido: vectorizar el logotipo (hoy es un PNG generado con IA con el fondo incluido).

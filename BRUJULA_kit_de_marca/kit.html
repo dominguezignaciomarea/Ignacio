@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>BRÚJULA — Kit de marca</title>
+<link href="fonts/fonts.css" rel="stylesheet">
+<style>
+:root{
+  --negro:#0A0E10; --blanco:#FFFFFF; --celeste:#98D4E6; --rojo:#FC1113; --rojo-osc:#C90705;
+  --amarillo:#FFDE59; --coral:#FF5757; --cian:#0AD8F0; --pizarra:#22303A; --gris:#3A3B3F; --gris-cl:#BFBEBB;
+  --tinta:#0E1A22; --petroleo:#0F4C5C; --papel:#F2EDE4; --niebla:#8A9BA5;
+}
+@page{size:1920px 1080px;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--negro)}
+body{font-family:'Fira Sans',sans-serif;color:var(--blanco);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--tinta);padding:110px 130px;page-break-after:always;break-after:page}
+.page:last-child{page-break-after:auto}
+.frame{position:absolute;right:0;top:0;bottom:0;width:22px;background:var(--celeste)}
+.foot{position:absolute;left:130px;right:130px;bottom:50px;display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:18px;color:var(--niebla);letter-spacing:.08em}
+.kicker{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:22px;letter-spacing:.18em;text-transform:uppercase;color:var(--celeste);display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.needle{display:inline-block;width:16px;height:30px;flex:none}
+h1{font-family:'Montserrat';font-weight:900;font-style:italic;font-size:120px;line-height:.92;letter-spacing:-.01em}
+h2{font-family:'Montserrat';font-weight:800;font-size:76px;line-height:1;margin-bottom:26px}
+h3{font-family:'Montserrat';font-weight:800;font-size:30px;margin-bottom:12px}
+p,li{font-size:26px;line-height:1.45;color:#D9E2E6}
+.lead{font-size:32px;line-height:1.4;max-width:1150px;color:#E6EDF0}
+.mono{font-family:'IBM Plex Mono',monospace}
+.small{font-size:20px;line-height:1.45;color:var(--niebla)}
+.new{display:inline-block;font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:17px;letter-spacing:.14em;background:var(--amarillo);color:var(--negro);padding:4px 12px 3px;border-radius:3px;vertical-align:middle;margin-left:14px}
+.grid{display:grid;gap:40px}
+.dial{position:absolute;opacity:.10}
+/* Swatches */
+.sw{border-radius:10px;overflow:hidden;background:#0b141a;border:1px solid #1f2c35}
+.sw .chip{height:150px;position:relative}
+.sw .meta{padding:18px 20px 20px}
+.sw .name{font-family:'Montserrat';font-weight:800;font-size:24px;margin-bottom:6px}
+.sw .hex{font-family:'IBM Plex Mono',monospace;font-size:19px;color:#C9D4D9}
+.sw .use{font-size:18px;line-height:1.35;color:var(--niebla);margin-top:8px}
+table{border-collapse:collapse;width:100%}
+td,th{font-size:21px;padding:13px 16px;border-bottom:1px solid #22323c;text-align:left}
+th{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:17px;letter-spacing:.1em;text-transform:uppercase;color:var(--niebla)}
+.ok{color:#7FE0A0;font-family:'IBM Plex Mono',monospace;font-weight:600}
+.mid{color:var(--amarillo);font-family:'IBM Plex Mono',monospace;font-weight:600}
+.no{color:var(--coral);font-family:'IBM Plex Mono',monospace;font-weight:600}
+.card{background:#0b141a;border:1px solid #1f2c35;border-radius:12px;padding:34px}
+.thumb{border-radius:8px;box-shadow:0 20px 50px rgba(0,0,0,.5);display:block}
+.x{position:relative}
+.x::after{content:"";position:absolute;inset:0;background:linear-gradient(to top right,transparent calc(50% - 3px),var(--coral) calc(50% - 3px),var(--coral) calc(50% + 3px),transparent calc(50% + 3px))}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--celeste);color:var(--negro);font-family:'Fira Sans';font-weight:700;font-size:30px;padding:6px 22px 6px 10px}
+.badge img{width:44px;height:44px}
+</style>
+</head>
+<body>
+
+<!-- SVG defs -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="aguja" viewBox="0 0 20 40"><path d="M10 0 L19 20 L10 20 Z" fill="#FC1113"/><path d="M10 0 L1 20 L10 20 Z" fill="#C90705"/><path d="M1 20 L10 40 L10 20 Z" fill="#E9EEF0"/><path d="M19 20 L10 40 L10 20 Z" fill="#FFFFFF"/><circle cx="10" cy="20" r="3.2" fill="#0A0E10"/></symbol>
+    <symbol id="dial" viewBox="-100 -100 200 200">
+      <circle r="92" fill="none" stroke="#98D4E6" stroke-width="0.6"/>
+      <g stroke="#98D4E6" stroke-width="0.6">
+        <line x1="0" y1="-92" x2="0" y2="-80"/><line x1="0" y1="92" x2="0" y2="80"/><line x1="-92" y1="0" x2="-80" y2="0"/><line x1="92" y1="0" x2="80" y2="0"/>
+      </g>
+      <g id="ticks"></g>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- 1 PORTADA -->
+<section class="page" style="background:radial-gradient(1200px 900px at 78% 40%, #123a47 0%, var(--tinta) 55%, var(--negro) 100%);padding:0">
+  <svg class="dial" style="right:-160px;top:-60px;width:1200px;height:1200px;opacity:.16"><use href="#dial"/></svg>
+  <img src="assets/isotipo_celeste.png" style="position:absolute;right:230px;top:180px;height:720px;border-radius:14px;box-shadow:0 40px 90px rgba(0,0,0,.6)">
+  <div style="position:absolute;left:130px;top:250px;width:900px">
+    <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>Brújula Informativa</div>
+    <h1 style="font-size:150px">Kit de<br>marca</h1>
+    <p class="lead" style="margin-top:40px;max-width:760px">Identidad visual, usos y recursos para que cada pieza se reconozca al primer vistazo.</p>
+    <div class="badge" style="margin-top:56px"><img src="assets/cursor.png" alt="">brujula-informativa.com</div>
+  </div>
+  <div class="foot" style="bottom:50px"><span>VERSIÓN 1.0 · OCTUBRE 2026</span><span>01</span></div>
+  <div class="frame"></div>
+</section>
+
+<!-- 2 SOBRE ESTE KIT -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>Antes de empezar</div>
+  <h2>Qué hay en este kit</h2>
+  <p class="lead">Este kit sistematiza lo que BRÚJULA ya viene haciendo en sus piezas y suma unos pocos recursos nuevos para darle más consistencia, legibilidad y carácter editorial. Lo nuevo aparece señalado con <span class="new">NUEVO</span></p>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:60px">
+    <div class="card"><h3>01 · Identidad</h3><p>Isotipo, logotipo, área de resguardo, tamaños mínimos y usos incorrectos.</p></div>
+    <div class="card"><h3>02 · Color y tipo</h3><p>La paleta medida de las piezas publicadas, una paleta extendida, el contraste accesible y la familia tipográfica.</p></div>
+    <div class="card"><h3>03 · Sistema</h3><p>Recursos gráficos, retícula, estructura de carrusel, aplicaciones y checklist antes de publicar.</p></div>
+  </div>
+  <div class="card" style="margin-top:40px;border-color:#2a4553">
+    <h3 class="mono" style="font-family:'IBM Plex Mono';font-size:22px;letter-spacing:.12em;color:var(--celeste)">MÉTODO</h3>
+    <p class="small" style="font-size:22px">Los colores base se <b style="color:#fff">midieron píxel a píxel</b> sobre piezas publicadas en Canva (carruseles "Todo roto", "Entrevista a Luis García", "La singularidad educativa", historia de marca). Pueden variar ±2 en cada canal por la compresión de las miniaturas. Los valores amarillo <span class="mono">#FFDE59</span> y gris <span class="mono">#3A3B3F</span>/<span class="mono">#BFBEBB</span> salen directamente de los datos del diseño. Las tipografías base se identificaron visualmente: conviene confirmarlas en el panel de texto de Canva.</p>
+  </div>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>02</span></div><div class="frame"></div>
+</section>
+
+<!-- 3 ISOTIPO Y LOGOTIPO -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>01 · Identidad</div>
+  <h2>Isotipo y logotipo</h2>
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:40px;gap:70px">
+    <div>
+      <div style="background:var(--celeste);height:440px;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="assets/isotipo_celeste.png" style="height:400px"></div>
+      <h3 style="margin-top:30px">Isotipo · la B con aguja</h3>
+      <p>La B negra con volumen y la aguja de brújula roja y blanca sobre un dial graduado. Es el símbolo para avatar, historias y sellos. Va siempre sobre celeste o sobre fondo oscuro con suficiente contraste.</p>
+    </div>
+    <div>
+      <div style="background:#0d1215;height:440px;border-radius:12px;display:flex;align-items:center;justify-content:center"><img src="assets/logotipo.png" style="height:360px"></div>
+      <h3 style="margin-top:30px">Logotipo · Brújula Informativa</h3>
+      <p>Palabra condensada, pesada, en blanco, con la aguja roja sobre la "ú". Va abajo y al centro en las placas internas y en el cierre de cada carrusel.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Imágenes: renders reales de las piezas (resolución de vista previa)</span><span>03</span></div><div class="frame"></div>
+</section>
+
+<!-- 4 USO DEL LOGO -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>01 · Identidad <span class="new">NUEVO</span></div>
+  <h2>Reglas de uso</h2>
+  <div class="grid" style="grid-template-columns:1.05fr 1fr;gap:70px;margin-top:30px">
+    <div>
+      <div style="position:relative;height:430px;background:#0d1215;border-radius:12px;display:flex;align-items:center;justify-content:center">
+        <div style="position:relative;padding:46px;border:2px dashed var(--celeste)">
+          <img src="assets/logotipo.png" style="height:250px;display:block">
+          <span class="mono" style="position:absolute;top:8px;left:50%;transform:translateX(-50%);color:var(--celeste);font-size:18px">x</span>
+          <span class="mono" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--celeste);font-size:18px">x</span>
+        </div>
+      </div>
+      <h3 style="margin-top:26px">Área de resguardo</h3>
+      <p>Dejá libre alrededor del logo un margen igual a <b>x</b> = la altura de la "B". No le pongas texto, bordes ni elementos dentro de esa zona.</p>
+      <h3 style="margin-top:22px">Tamaños mínimos</h3>
+      <p>Logotipo: 160 px de ancho en una placa de 1080 px. Isotipo: 96 px. Con menos tamaño, la palabra "Informativa" deja de leerse.</p>
+    </div>
+    <div>
+      <h3>Usos incorrectos</h3>
+      <div class="grid" style="grid-template-columns:1fr 1fr;gap:22px;margin-top:16px">
+        <div><div class="x" style="height:190px;background:#0d1215;border-radius:10px;display:flex;align-items:center;justify-content:center"><img src="assets/logotipo.png" style="height:150px;transform:scaleX(1.5)"></div><p class="small" style="margin-top:8px">No deformarlo ni estirarlo.</p></div>
+        <div><div class="x" style="height:190px;background:#0d1215;border-radius:10px;display:flex;align-items:center;justify-content:center"><img src="assets/logotipo.png" style="height:150px;transform:rotate(-14deg)"></div><p class="small" style="margin-top:8px">No rotarlo.</p></div>
+        <div><div class="x" style="height:190px;background:#c9c3b8;border-radius:10px;display:flex;align-items:center;justify-content:center"><img src="assets/logotipo.png" style="height:150px;opacity:.85"></div><p class="small" style="margin-top:8px">No ponerlo sobre fondos claros: su textura oscura forma una caja.</p></div>
+        <div><div class="x" style="height:190px;background:#0d1215;border-radius:10px;display:flex;align-items:center;justify-content:center"><img src="assets/logotipo.png" style="height:150px;filter:hue-rotate(160deg) saturate(2)"></div><p class="small" style="margin-top:8px">No recolorear la aguja ni la palabra.</p></div>
+      </div>
+      <div class="card" style="margin-top:26px;padding:24px 28px;border-color:#5a4a1c">
+        <p class="small" style="color:#E8D9A8;font-size:21px"><b>Mejora recomendada:</b> hoy el logotipo es una imagen raster (1149×1368 px) con el fondo texturado incluido. Conviene <b>vectorizarlo</b> (SVG con fondo transparente) para usarlo sobre cualquier fondo y a cualquier tamaño.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>04</span></div><div class="frame"></div>
+</section>
+
+<!-- 5 PALETA BASE -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>02 · Color</div>
+  <h2>Paleta base</h2>
+  <p class="lead" style="margin-bottom:36px">Son los colores que ya definen a BRÚJULA. El negro y el celeste son la estructura; el rojo es la aguja y aparece poco; el amarillo y el coral marcan la firma.</p>
+  <div class="grid" style="grid-template-columns:repeat(6,1fr);gap:24px">
+    <div class="sw"><div class="chip" style="background:var(--negro);border-bottom:1px solid #22323c"></div><div class="meta"><div class="name">Negro</div><div class="hex">#0A0E10</div><div class="use">Fondo de las placas internas.</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--celeste)"></div><div class="meta"><div class="name">Celeste</div><div class="hex">#98D4E6</div><div class="use">Marco lateral, etiqueta web e historias.</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--rojo)"></div><div class="meta"><div class="name">Rojo aguja</div><div class="hex">#FC1113 · #C90705</div><div class="use">Solo la aguja y acentos mínimos.</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--blanco)"></div><div class="meta"><div class="name">Blanco</div><div class="hex">#FFFFFF</div><div class="use">Títulos y texto sobre oscuro.</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--amarillo)"></div><div class="meta"><div class="name">Amarillo firma</div><div class="hex">#FFDE59</div><div class="use">Autoría y bajadas destacadas.</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--coral)"></div><div class="meta"><div class="name">Coral firma</div><div class="hex">#FF5757</div><div class="use">Alternativa de firma (por ejemplo, "Todo roto").</div></div></div>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(6,1fr);gap:24px;margin-top:24px">
+    <div class="sw"><div class="chip" style="height:90px;background:var(--pizarra)"></div><div class="meta"><div class="name" style="font-size:20px">Pizarra</div><div class="hex">#22303A</div></div></div>
+    <div class="sw"><div class="chip" style="height:90px;background:var(--cian)"></div><div class="meta"><div class="name" style="font-size:20px">Cian destello</div><div class="hex">#0AD8F0</div></div></div>
+    <div class="sw"><div class="chip" style="height:90px;background:var(--gris)"></div><div class="meta"><div class="name" style="font-size:20px">Punto inactivo</div><div class="hex">#3A3B3F</div></div></div>
+    <div class="sw"><div class="chip" style="height:90px;background:var(--gris-cl)"></div><div class="meta"><div class="name" style="font-size:20px">Punto activo</div><div class="hex">#BFBEBB</div></div></div>
+    <div style="grid-column:span 2" class="card"><p class="small" style="font-size:20px">El <b style="color:#d860dc">magenta #D860DC</b> aparece en una pieza temprana ("Lago Escondido"). Se recomienda <b>retirarlo</b>: no dialoga con el resto de la paleta.</p></div>
+  </div>
+  <div class="foot"><span>Valores medidos sobre las piezas publicadas · ver método en p. 02</span><span>05</span></div><div class="frame"></div>
+</section>
+
+<!-- 6 PALETA EXTENDIDA -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>02 · Color <span class="new">NUEVO</span></div>
+  <h2>Paleta extendida</h2>
+  <p class="lead" style="margin-bottom:46px">Cuatro colores que nacen de la paleta base. Dan profundidad a los fondos oscuros, aportan un tono editorial cálido y suman un gris legible para texto secundario.</p>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:30px">
+    <div class="sw"><div class="chip" style="height:220px;background:var(--tinta);box-shadow:inset 0 0 0 2px #2c4250"></div><div class="meta"><div class="name">Tinta noche</div><div class="hex">#0E1A22</div><div class="use">Fondo principal alternativo al negro: es un negro con alma celeste. Permite degradés suaves hacia el Petróleo.</div></div></div>
+    <div class="sw"><div class="chip" style="height:220px;background:var(--petroleo)"></div><div class="meta"><div class="name">Petróleo</div><div class="hex">#0F4C5C</div><div class="use">El puente entre el celeste y el negro: cajas de dato, fondos de cita y velos sobre fotos.</div></div></div>
+    <div class="sw"><div class="chip" style="height:220px;background:var(--papel)"></div><div class="meta"><div class="name">Papel</div><div class="hex">#F2EDE4</div><div class="use">Blanco cálido de diario para citas y textos largos. Cansa menos que el blanco puro sobre negro.</div></div></div>
+    <div class="sw"><div class="chip" style="height:220px;background:var(--niebla)"></div><div class="meta"><div class="name">Niebla</div><div class="hex">#8A9BA5</div><div class="use">Texto secundario: fuentes, fechas y epígrafes. Supera AA sobre Negro y Tinta.</div></div></div>
+  </div>
+  <div style="display:flex;gap:0;margin-top:36px;height:60px;border-radius:10px;overflow:hidden;border:2px solid #2c4250">
+    <div style="flex:3;background:var(--negro);border-right:2px solid #2c4250"></div><div style="flex:3;background:var(--tinta)"></div><div style="flex:2;background:var(--petroleo)"></div><div style="flex:2;background:var(--celeste)"></div><div style="flex:1.2;background:var(--papel)"></div><div style="flex:.6;background:var(--amarillo)"></div><div style="flex:.3;background:var(--rojo)"></div>
+  </div>
+  <p class="small" style="margin-top:12px">Proporción de uso sugerida: mucho oscuro, un poco de celeste y acentos mínimos de amarillo y rojo.</p>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>06</span></div><div class="frame"></div>
+</section>
+
+<!-- 7 CONTRASTE -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>02 · Color <span class="new">NUEVO</span></div>
+  <h2>Contraste accesible</h2>
+  <p class="lead" style="margin-bottom:34px">Relación de contraste según WCAG 2.1. Para texto común hace falta 4,5:1 (AA) y para títulos grandes, 3:1. Calculado sobre los valores hex de este kit.</p>
+  <table>
+    <tr><th>Texto ↓ / Fondo →</th><th>Negro #0A0E10</th><th>Tinta #0E1A22</th><th>Pizarra #22303A</th><th>Petróleo #0F4C5C</th><th>Celeste #98D4E6</th></tr>
+    <tr><td>Blanco</td><td class="ok">19,4 ✓</td><td class="ok">17,7 ✓</td><td class="ok">13,5 ✓</td><td class="ok">9,5 ✓</td><td class="no">1,6 ✕</td></tr>
+    <tr><td>Papel</td><td class="ok">16,6 ✓</td><td class="ok">15,1 ✓</td><td class="ok">11,6 ✓</td><td class="ok">8,2 ✓</td><td class="no">1,4 ✕</td></tr>
+    <tr><td>Celeste</td><td class="ok">11,9 ✓</td><td class="ok">10,8 ✓</td><td class="ok">8,3 ✓</td><td class="ok">5,8 ✓</td><td>—</td></tr>
+    <tr><td>Amarillo firma</td><td class="ok">14,6 ✓</td><td class="ok">13,3 ✓</td><td class="ok">10,2 ✓</td><td class="ok">7,2 ✓</td><td class="no">1,2 ✕</td></tr>
+    <tr><td>Coral firma</td><td class="ok">6,2 ✓</td><td class="ok">5,7 ✓</td><td class="mid">4,4 títulos</td><td class="mid">3,1 títulos</td><td class="no">1,9 ✕</td></tr>
+    <tr><td>Niebla</td><td class="ok">6,8 ✓</td><td class="ok">6,1 ✓</td><td class="ok">4,7 ✓</td><td class="mid">3,3 títulos</td><td class="no">1,8 ✕</td></tr>
+    <tr><td>Rojo aguja</td><td class="ok">4,8 ✓</td><td class="mid">4,4 títulos</td><td class="mid">3,4 títulos</td><td class="no">2,4 ✕</td><td class="no">2,5 ✕</td></tr>
+    <tr><td>Negro</td><td>—</td><td class="no">1,1 ✕</td><td class="no">1,4 ✕</td><td class="no">2,0 ✕</td><td class="ok">11,9 ✓</td></tr>
+  </table>
+  <p class="small" style="margin-top:22px">Lectura rápida: sobre celeste, el texto va siempre en negro (como en la etiqueta web). El rojo no se usa para texto chico.</p>
+  <div class="foot"><span>Fórmula WCAG 2.1 de luminancia relativa · ✓ AA texto normal · títulos = solo AA grande (≥ 24 px, o 19 px en bold)</span><span>07</span></div><div class="frame"></div>
+</section>
+
+<!-- 8 TIPOGRAFÍA BASE -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>02 · Tipografía</div>
+  <h2>Familia base</h2>
+  <div class="grid" style="grid-template-columns:1.25fr 1fr 1fr;gap:50px;margin-top:30px">
+    <div class="card">
+      <p class="small mono" style="font-family:'IBM Plex Mono'">TÍTULOS · PORTADAS · FIRMA</p>
+      <div style="font-family:'Montserrat';font-weight:900;font-style:italic;font-size:96px;line-height:.95;margin:18px 0">Todo<br>roto</div>
+      <div style="font-family:'Montserrat';font-weight:800;font-size:34px">Montserrat</div>
+      <p class="small">ExtraBold y Black, en recta y en itálica. La itálica Black es la voz de la portada; la firma va en SemiBold con color.</p>
+    </div>
+    <div class="card">
+      <p class="small mono" style="font-family:'IBM Plex Mono'">FRASES EN MAYÚSCULAS</p>
+      <div style="font-family:'Bebas Neue';font-size:92px;line-height:.95;margin:18px 0">HAY FAMILIAS QUE PIDEN QUEDARSE</div>
+      <div style="font-family:'Montserrat';font-weight:800;font-size:34px">Bebas Neue*</div>
+      <p class="small">Condensada y en mayúsculas, para las frases de las placas internas con tono de urgencia.</p>
+    </div>
+    <div class="card">
+      <p class="small mono" style="font-family:'IBM Plex Mono'">FRASES EN PLACAS INTERNAS</p>
+      <div style="font-family:'Fira Sans';font-weight:700;font-size:56px;line-height:1.02;margin:18px 0">El odio ya no paraliza como antes.</div>
+      <div style="font-family:'Montserrat';font-weight:800;font-size:34px">Fira Sans*</div>
+      <p class="small">Bold. Una sans humanista muy legible para frases de dos a seis líneas.</p>
+    </div>
+  </div>
+  <p class="small" style="margin-top:30px">* Identificación visual a partir de las piezas. Confirmá el nombre exacto en el panel de texto de Canva antes de fijarlo como norma. Montserrat se identifica con alta confianza.</p>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>08</span></div><div class="frame"></div>
+</section>
+
+<!-- 9 TIPOGRAFÍA NUEVA -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>02 · Tipografía <span class="new">NUEVO</span></div>
+  <h2>Dos voces complementarias</h2>
+  <div class="grid" style="grid-template-columns:1fr 1fr;gap:50px;margin-top:20px">
+    <div class="card" style="background:var(--petroleo);border-color:#1d6476">
+      <p class="small" style="font-family:'IBM Plex Mono';color:#bfe6f1">CITAS · TEXTOS LARGOS · EPÍGRAFES</p>
+      <div style="font-family:'Newsreader';font-style:italic;font-weight:500;font-size:62px;line-height:1.08;margin:22px 0;color:var(--papel)">“La pausa no es un lujo ni una debilidad: es parte del trabajo docente.”</div>
+      <div style="font-family:'Montserrat';font-weight:800;font-size:34px">Newsreader</div>
+      <p style="color:#d6eef5">Una serif diseñada para leer noticias en pantalla. Da autoridad periodística y separa con claridad <b>lo que dice otra persona</b> de lo que afirma BRÚJULA. Usarla en itálica para citas y en recta para párrafos largos.</p>
+    </div>
+    <div class="card">
+      <p class="small" style="font-family:'IBM Plex Mono'">DATOS · FUENTES · FECHAS · SECCIONES</p>
+      <div style="font-family:'IBM Plex Mono';font-weight:600;font-size:46px;line-height:1.2;margin:22px 0;color:var(--celeste)">USD 122.250<br><span style="font-weight:400;font-size:26px;color:var(--niebla)">FUENTE: PLIEG-2025-11117629-GCABA</span></div>
+      <div style="font-family:'Montserrat';font-weight:800;font-size:34px">IBM Plex Mono</div>
+      <p>Una monoespaciada técnica para todo lo que se puede verificar: cifras, expedientes, fechas y créditos. Que lo documental tenga una letra propia refuerza el rigor del medio.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:36px">Jerarquía en una placa de 1080 × 1350</h3>
+  <div style="display:flex;gap:46px;align-items:baseline;flex-wrap:wrap">
+    <span style="font-family:'Montserrat';font-weight:900;font-style:italic;font-size:64px">Título 100</span>
+    <span style="font-family:'Fira Sans';font-weight:700;font-size:44px">Frase 74</span>
+    <span style="font-family:'Newsreader';font-style:italic;font-size:40px;color:var(--papel)">Cita 64</span>
+    <span style="font-family:'Montserrat';font-weight:700;font-size:30px;color:var(--amarillo)">Firma 44</span>
+    <span style="font-family:'IBM Plex Mono';font-size:24px;color:var(--niebla)">FUENTE 26</span>
+  </div>
+  <div class="foot"><span>Google Fonts · licencia OFL (libres). Si faltan en Canva: "Subir fuente" (Canva Pro)</span><span>09</span></div><div class="frame"></div>
+</section>
+
+<!-- 10 RECURSOS EXISTENTES -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>03 · Sistema</div>
+  <h2>Recursos gráficos actuales</h2>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:40px;margin-top:30px">
+    <div class="card"><div style="height:150px;display:flex;align-items:center"><div class="badge"><img src="assets/cursor.png" alt="">brujula-informativa.com</div></div><h3>Etiqueta web</h3><p>Una franja celeste con el cursor y la URL en negro. Va al pie de portadas y cierres.</p></div>
+    <div class="card"><div style="height:150px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start"><span style="font-family:'Montserrat';font-weight:800;font-size:36px">Entrevista a Luis García</span><span style="font-family:'Montserrat';font-weight:600;font-size:28px;color:var(--amarillo)">Por Esteban Campos</span></div><h3>Bloque de firma</h3><p>Una línea blanca en ExtraBold y debajo la autoría en amarillo o coral, alineadas a la derecha.</p></div>
+    <div class="card"><div style="height:150px;display:flex;align-items:center;gap:24px"><div style="width:22px;height:140px;background:var(--celeste)"></div><svg width="60" height="70" viewBox="0 0 60 70"><path d="M8 6 L52 35 L8 64 Z" fill="none" stroke="#98D4E6" stroke-width="5"/></svg><div style="display:flex;gap:9px">
+      <i style="width:13px;height:13px;border-radius:50%;background:#BFBEBB;display:block"></i><i style="width:13px;height:13px;border-radius:50%;background:#3A3B3F;display:block"></i><i style="width:13px;height:13px;border-radius:50%;background:#3A3B3F;display:block"></i><i style="width:13px;height:13px;border-radius:50%;background:#3A3B3F;display:block"></i></div></div><h3>Marco, flecha y paginación</h3><p>Un filete celeste en el borde derecho; una flecha ▷ que invita a deslizar; puntos que marcan la posición en el carrusel.</p></div>
+  </div>
+  <div class="grid" style="grid-template-columns:1fr 1fr;gap:40px;margin-top:40px">
+    <div class="card" style="display:flex;gap:30px;align-items:center"><div style="width:260px;height:150px;border-radius:8px;flex:none;background:linear-gradient(to bottom,rgba(10,14,16,0) 0%,rgba(10,14,16,.85) 60%),linear-gradient(to top,#74b0c0 0%,#1a3a45 100%)"></div><div><h3>Degradé de portada</h3><p>La foto oscurecida hacia abajo, con un velo celeste al pie: así el título siempre se lee.</p></div></div>
+    <div class="card" style="display:flex;gap:30px;align-items:center"><div style="width:260px;height:150px;border-radius:8px;flex:none;background:#22303A;background-image:radial-gradient(circle at 30% 20%,#2c3c44 0,transparent 40%),radial-gradient(circle at 80% 70%,#1a262e 0,transparent 50%)"></div><div><h3>Textura de fondo</h3><p>Una foto temática casi invisible (3 a 13 % de opacidad) detrás del texto de las placas internas.</p></div></div>
+  </div>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>10</span></div><div class="frame"></div>
+</section>
+
+<!-- 11 RECURSOS NUEVOS -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>03 · Sistema <span class="new">NUEVO</span></div>
+  <h2>Recursos nuevos</h2>
+  <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:36px;margin-top:10px">
+    <div class="card">
+      <div style="height:150px;display:flex;align-items:center;gap:30px"><svg width="44" height="88"><use href="#aguja"/></svg><div class="kicker" style="margin:0;font-size:24px"><svg class="needle"><use href="#aguja"/></svg>Educación · Opinión</div></div>
+      <h3>Aguja-señal y volanta</h3><p>La aguja del isotipo, aislada, funciona como viñeta o señal. Junto a una volanta en Plex Mono celeste indica la sección o el formato.</p>
+    </div>
+    <div class="card" style="background:var(--petroleo);border-color:#1d6476">
+      <div style="height:150px;display:flex;align-items:center"><div style="border-left:6px solid var(--amarillo);padding-left:22px"><div style="font-family:'Newsreader';font-style:italic;font-size:36px;line-height:1.1;color:var(--papel)">“El habitus también aprende a scrollear.”</div><div class="mono" style="font-size:17px;color:#bfe6f1;margin-top:10px">— J. LINNE, 2023</div></div></div>
+      <h3>Placa de cita</h3><p>Fondo Petróleo, filete amarillo, texto en Newsreader itálica Papel y crédito en Plex Mono. Deja en claro de quién son las palabras.</p>
+    </div>
+    <div class="card">
+      <div style="height:150px;display:flex;align-items:center"><div style="border:2px solid var(--celeste);border-radius:6px;padding:18px 24px;width:100%"><div class="mono" style="font-size:16px;color:var(--celeste);letter-spacing:.12em">EL DATO</div><div style="font-family:'Montserrat';font-weight:900;font-size:50px;line-height:1">2020</div><div class="mono" style="font-size:15px;color:var(--niebla);margin-top:6px">FUENTE: TJUE, C-311/18 (SCHREMS II)</div></div></div>
+      <h3>Ficha de dato con fuente</h3><p>Un número grande y, siempre, su fuente debajo. Ningún dato sale sin respaldo visible: es la marca del rigor de BRÚJULA.</p>
+    </div>
+  </div>
+  <div class="grid" style="grid-template-columns:1fr 1fr;gap:36px;margin-top:26px">
+    <div class="card" style="display:flex;gap:30px;align-items:center;overflow:hidden;padding:26px 34px"><svg width="150" height="150" style="flex:none;background:var(--petroleo);border-radius:50%;opacity:.95"><use href="#dial"/></svg><div><h3>Dial como trama</h3><p>El dial graduado del isotipo, en celeste al 10–16 %, sirve de fondo para placas sin foto. Da identidad sin depender de imágenes.</p></div></div>
+    <div class="card" style="display:flex;gap:30px;align-items:center;padding:26px 34px"><div style="flex:none;width:150px;height:150px;border-radius:8px;background:linear-gradient(160deg,var(--negro) 0%,var(--tinta) 45%,var(--petroleo) 100%)"></div><div><h3>Degradé Noche → Petróleo</h3><p>Un fondo alternativo para placas internas sin foto. Es más profundo que el negro plano y sigue siendo oscuro.</p></div></div>
+  </div>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>11</span></div><div class="frame"></div>
+</section>
+
+<!-- 12 RETÍCULA Y CARRUSEL -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>03 · Sistema</div>
+  <h2>Retícula y estructura de carrusel</h2>
+  <div style="display:flex;gap:60px;margin-top:40px;align-items:flex-start">
+    <div style="flex:none;position:relative;width:432px;height:540px;background:var(--negro);border:1px solid #2a3a44">
+      <div style="position:absolute;inset:0 0 0 auto;width:9px;background:var(--celeste)"></div>
+      <div style="position:absolute;left:16px;right:25px;top:24px;bottom:24px;border:2px dashed rgba(152,212,230,.6)"></div>
+      <div style="position:absolute;left:16px;right:25px;top:120px;height:200px;background:rgba(255,255,255,.10);display:flex;align-items:center;justify-content:center" class="mono"><span style="font-size:16px;color:#ccd">ZONA DE FRASE</span></div>
+      <div style="position:absolute;left:180px;bottom:30px;width:72px;height:72px;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center" class="mono"><span style="font-size:12px;color:#ccd">LOGO</span></div>
+      <div style="position:absolute;right:40px;bottom:52px;display:flex;gap:5px"><i style="width:6px;height:6px;border-radius:50%;background:#BFBEBB;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#3A3B3F;display:block"></i><i style="width:6px;height:6px;border-radius:50%;background:#3A3B3F;display:block"></i></div>
+      <span class="mono" style="position:absolute;left:0;bottom:-34px;font-size:16px;color:var(--niebla)">1080 × 1350 px · 4:5</span>
+    </div>
+    <div style="flex:1">
+      <p><b>Márgenes:</b> 40 px a los costados (más el filete celeste de 22 px a la derecha), y 60 px arriba y abajo.<br><b>Frase:</b> en el tercio medio, alineada a la izquierda, de 2 a 6 líneas como máximo.<br><b>Pie:</b> logo centrado y paginación a la derecha.</p>
+      <h3 style="margin-top:34px">Arco del carrusel (de 7 a 10 placas)</h3>
+      <div style="display:flex;gap:14px;margin-top:14px">
+        <div class="card" style="flex:1.2;padding:22px"><div class="mono" style="color:var(--amarillo);font-size:17px">01</div><h3 style="font-size:24px">Portada</h3><p class="small">Foto con degradé, título en itálica Black, firma y etiqueta web.</p></div>
+        <div class="card" style="flex:1;padding:22px"><div class="mono" style="color:var(--amarillo);font-size:17px">02</div><h3 style="font-size:24px">Gancho</h3><p class="small">Una escena o pregunta que interpela.</p></div>
+        <div class="card" style="flex:1.4;padding:22px"><div class="mono" style="color:var(--amarillo);font-size:17px">03–08</div><h3 style="font-size:24px">Una idea por placa</h3><p class="small">Frase, cita o ficha de dato. Siempre con fuente.</p></div>
+        <div class="card" style="flex:1.2;padding:22px"><div class="mono" style="color:var(--amarillo);font-size:17px">FINAL</div><h3 style="font-size:24px">Cierre</h3><p class="small">Una frase-fuerza con estilo de portada y la etiqueta web.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>12</span></div><div class="frame"></div>
+</section>
+
+<!-- 13 APLICACIONES -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>03 · Sistema</div>
+  <h2>Aplicaciones</h2>
+  <div style="display:flex;gap:26px;margin-top:70px;align-items:flex-end">
+    <div><img class="thumb" src="assets/p_todo_roto.png" style="height:420px"><p class="small" style="margin-top:10px">Portada · "Todo roto"</p></div>
+    <div><img class="thumb" src="assets/i_todo_roto.png" style="height:420px"><p class="small" style="margin-top:10px">Interna · Bebas</p></div>
+    <div><img class="thumb" src="assets/p_singularidad.png" style="height:420px"><p class="small" style="margin-top:10px">Portada · "La singularidad educativa"</p></div>
+    <div><img class="thumb" src="assets/i_singularidad.png" style="height:420px"><p class="small" style="margin-top:10px">Interna · Fira Sans</p></div>
+    <div><img class="thumb" src="assets/story_isotipo.png" style="height:420px"><p class="small" style="margin-top:10px">Historia · isotipo</p></div>
+  </div>
+  <div class="foot"><span>Piezas reales publicadas en Canva (vista previa)</span><span>13</span></div><div class="frame"></div>
+</section>
+
+<!-- 14 VOZ + CHECKLIST -->
+<section class="page">
+  <div class="kicker"><svg class="needle"><use href="#aguja"/></svg>03 · Sistema <span class="new">NUEVO</span></div>
+  <h2>Voz y checklist de publicación</h2>
+  <div class="grid" style="grid-template-columns:1fr 1.1fr;gap:60px;margin-top:20px">
+    <div>
+      <h3>Cómo suena BRÚJULA</h3>
+      <ul style="list-style:none">
+        <li style="margin:14px 0;display:flex;gap:16px"><svg width="14" height="28" style="flex:none;margin-top:6px"><use href="#aguja"/></svg><span><b>Orienta, no grita.</b> Frases cortas y claras, sin sensacionalismo.</span></li>
+        <li style="margin:14px 0;display:flex;gap:16px"><svg width="14" height="28" style="flex:none;margin-top:6px"><use href="#aguja"/></svg><span><b>Pensamiento crítico.</b> Pregunta por las causas, los intereses y quién decide.</span></li>
+        <li style="margin:14px 0;display:flex;gap:16px"><svg width="14" height="28" style="flex:none;margin-top:6px"><use href="#aguja"/></svg><span><b>Con los pies en el territorio.</b> Parte de escenas reales (el aula, el barrio) antes de ir a la teoría.</span></li>
+        <li style="margin:14px 0;display:flex;gap:16px"><svg width="14" height="28" style="flex:none;margin-top:6px"><use href="#aguja"/></svg><span><b>Justicia social como brújula.</b> Nombra desigualdades y no deja a nadie como mero dato.</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Antes de publicar</h3>
+      <ul style="list-style:none;font-size:24px">
+        <li style="margin:10px 0">☐ Cada cifra y cada cita tienen su fuente, visible o en el pie del posteo.</li>
+        <li style="margin:10px 0">☐ Los datos se chequearon contra el documento original, no contra el resumen.</li>
+        <li style="margin:10px 0">☐ El contraste cumple AA (ver p. 07). Nada de texto chico en rojo.</li>
+        <li style="margin:10px 0">☐ El logo respeta el área de resguardo y está en su lugar.</li>
+        <li style="margin:10px 0">☐ Las fotos tienen permiso o crédito, y las imágenes generadas con IA se identifican como tales.</li>
+        <li style="margin:10px 0">☐ El texto alternativo está cargado en Instagram para cada placa.</li>
+        <li style="margin:10px 0">☐ No hay erratas: leer en voz alta una vez.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>BRÚJULA · KIT DE MARCA</span><span>14</span></div><div class="frame"></div>
+</section>
+
+<!-- 15 CONTRA -->
+<section class="page" style="background:var(--celeste);padding:0">
+  <img src="assets/isotipo_celeste.png" style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);height:560px">
+  <div style="position:absolute;left:0;right:0;bottom:120px;text-align:center;color:var(--negro)">
+    <div style="font-family:'Montserrat';font-weight:900;font-style:italic;font-size:54px">Orientarse también es un acto político.</div>
+    <div class="mono" style="font-size:24px;margin-top:16px;letter-spacing:.1em">BRUJULA-INFORMATIVA.COM</div>
+  </div>
+</section>
+
+<script>
+// ticks del dial
+const g=document.querySelector('#ticks');
+for(let i=0;i<72;i++){const a=i*5*Math.PI/180, r1=92, r2=i%6===0?82:87;
+ const l=document.createElementNS('http://www.w3.org/2000/svg','line');
+ l.setAttribute('x1',Math.sin(a)*r1);l.setAttribute('y1',-Math.cos(a)*r1);l.setAttribute('x2',Math.sin(a)*r2);l.setAttribute('y2',-Math.cos(a)*r2);
+ l.setAttribute('stroke','#98D4E6');l.setAttribute('stroke-width','1');g.appendChild(l);}
+</script>
+</body>
+</html>
