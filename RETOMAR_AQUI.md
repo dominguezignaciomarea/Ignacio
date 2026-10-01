@@ -40,3 +40,9 @@ Pendiente: terminar las placas que faltan, y conseguir del usuario las fotos rea
 Si las herramientas `mcp__Canva__*` no aparecen en la sesión, **reconectar Canva no alcanza**: el listado de herramientas MCP se congela al iniciar la sesión. Hay que reconectar y después **abrir una sesión nueva**.
 
 Comprobación rápida: buscar `mcp__Canva__get-design`. Si devuelve "No matching deferred tools found", las herramientas no están cargadas.
+
+---
+
+## Proyecto D — Carrusel BRÚJULA "La singularidad educativa"
+
+**Estado: fase 1 (portada de prueba) hecha, esperando aprobación.** Ver **`BRUJULA_carrusel_singularidad_educativa.md`**: tiene el guion aprobado, la identidad BRÚJULA relevada en Canva y los IDs de diseño.
