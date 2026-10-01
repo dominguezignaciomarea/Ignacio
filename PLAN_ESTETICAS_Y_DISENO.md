@@ -42,3 +42,11 @@ Hallazgos transversales:
 
 Pendiente de Fase 1: carruseles de entrevista de BRÚJULA y historia 9:16; revista TARDE Y MAÑANA y piezas de elecciones; más piezas de UTE (historias, flyer A4, 16:9).
 Siguiente: **Fase 2 — plantillas maestras**. Hecho (2026-10-01): BRÚJULA post 4:5 (`DAHWyuSMqs8`), UTE AMBIENTE carrusel (`DAHWywHcTwY`), Mariano Acosta post evento (`DAHWy1K7zKM`). Ver cada guía. Pendiente: otros formatos (historia 9:16, flyer A4, 16:9) y Fase 3 (flujo de producción).
+
+## Fase 3 — primera prueba (2026-10-01)
+Carrusel "¿Cómo separar en casa?" (`DAHWy7MyCjg`), ver `UTE_AMBIENTE_carrusel_separar_en_casa.md`. Lecciones del conector:
+- `copy-design` **no acepta páginas repetidas** (ej. `[1,2,2]` da error). Para tener más placas con el mismo diseño, copiar páginas distintas del original.
+- `merge-designs` es poco confiable: una inserción "exitosa" no agregó la página; otra falló ("Failed to commit session"); solo admite **una operación por llamada**.
+- `add_text` crea texto en la fuente por defecto `YACgEZ1cb1Q,0`, 16 px, negro: siempre hay que aplicar `format_text` después.
+- Títulos "bubble" (elementos `unsupported`) se pueden **borrar** y reemplazar, no editar.
+- Quedó un diseño auxiliar sin usar: `DAHWy-dUsa0` ("UTE AMBIENTE – Carrusel ¿Cómo separar en casa?", 2 págs., copia del maestro). **No se borró**: consultar al usuario.
