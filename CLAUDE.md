@@ -16,15 +16,16 @@ Este archivo carga automáticamente el contexto necesario para trabajar con Igna
 ## Estética visual de Brújula
 
 ### Reglas fijas (no negociar)
-- **Fondo:** siempre oscuro (negro, azul marino profundo, gris carbón)
-- **Texto principal:** blanco, bold, centrado
-- **Byline / autor:** rojo `#FF3B30`, bold, tamaño menor al título
-- **Acento:** cian `#00E5FF` para elementos gráficos, explosiones de color, detalles
+- **Fondo de página:** siempre `#000000` (negro puro), nunca gris
+- **Fondo imagen:** siempre oscuro (negro, azul marino profundo, gris carbón), opacidad **0.79**
+- **Gradiente oscuro encima del fondo:** elemento `MAHBY_ZFzrQ` con opacity 0.72 que oscurece la mitad inferior para mejorar legibilidad
+- **Texto principal:** blanco, ultrabold, centrado
+- **Byline / autor:** naranja `#FF751F` cuando hay foto circular del autor; rojo `#FF3B30` sin foto
+- **Acento:** cian `#00E5FF` / `#98D4E7` para bordes de foto y elementos gráficos
 - **Sin fondos claros, sin texto negro, sin colores pasteles**
-- **URL siempre presente:** `brujula-informativa.com`, blanco, tamaño pequeño, parte inferior
+- **URL siempre presente:** `brujula-informativa.com`, parte inferior
 
 ### Elementos de marca recurrentes en Canva
-Estos assets de borde y decoración aparecen en todas las tapas:
 | Asset ID | Descripción |
 |---|---|
 | `MAHEkzFjR3o` | Borde izquierdo vertical |
@@ -34,13 +35,52 @@ Estos assets de borde y decoración aparecen en todas las tapas:
 | `MAHEkxs6i4k` | Borde superior horizontal |
 | `MAHEkxUJ6aU` | Barra de URL inferior |
 | `MAHEk9ZXBPc` | Ícono decorativo de URL |
+| `MAHBY_ZFzrQ` | Gradiente oscuro semitransparente (opacity 0.72) |
 
-### Composición estándar de flyer de entrevista
-- **Zona superior (top: 0–500):** imagen del entrevistado o fondo generativo
-- **Cita (top: ~570–620):** texto blanco, bold, size 34–38, centrado, width: 972
-- **Byline (top: ~840):** rojo `#FF3B30`, size 20–22, bold, centrado
-  - Formato: `"Entrevista a [Nombre].\n[Credenciales abreviadas]"`
-- **URL (top: ~1050):** blanco, size 18, centrado
+---
+
+## Composición estándar — tapa de análisis o entrevista
+
+### Estructura de capas (de abajo hacia arriba)
+1. **Fondo negro** (`#000000`) — color de página
+2. **Imagen de fondo** — opacidad 0.79, reencuadrada para máximo impacto (no necesariamente 1:1 con el canvas)
+3. **Gradiente oscuro** (`MAHBY_ZFzrQ`, opacity 0.72) — oscurece la mitad inferior
+4. **Bordes de marca** (izquierdo, derecho, superior, inferior)
+5. **Textos** — título, bajada, byline, URL
+6. **Foto circular del autor** (cuando aplica)
+7. **Barra URL**
+
+### Jerarquía tipográfica del título — DOS elementos separados
+El título se divide en dos elementos con fuentes y tamaños distintos para generar tensión visual:
+
+| Elemento | Posición | Font | Size | Weight | Color | Tracking |
+|---|---|---|---|---|---|---|
+| Frase gancho / "bajada" | top: ~50–100 | `YACgEUFdPdA` (serif elegante) | ~89px | normal | `#FFFFFF` | -0.064 |
+| Título completo de la nota | top: ~700–800 | `YAFdtQi73Xs` (sans bold) | ~70px | ultrabold | `#FFFFFF` | 0 |
+
+**Lógica**: la frase corta e impactante va arriba grande. El título largo va abajo más pequeño. Jerarquía invertida — genera curiosidad.
+
+### Foto circular del autor
+- Forma: círculo con path `M32 0A32 32 0 1 0 32 64A32 32 0 1 0 32 0Z`
+- Tamaño: ~165×165px
+- Borde stroke: **4px**, color `#98D4E7` (cian claro)
+- Posición: izquierda del byline, mismo nivel vertical (~top: 925)
+- El byline se desplaza a la derecha para dejarle lugar (left: ~268)
+
+### Byline con foto circular
+- Tamaño: **~35px** (mucho mayor que sin foto)
+- Color: **`#FF751F`** (naranja)
+- Alineado a la derecha de la foto circular
+- Formato: `"Por [Nombre].\n[Credenciales]"`
+
+### Byline sin foto
+- Tamaño: 20–22px
+- Color: **`#FF3B30`** (rojo estándar)
+- Centrado, width completo
+
+### URL
+- Barra `MAHEkxUJ6aU` + ícono `MAHEk9ZXBPc`
+- Posición: top ~1112–1130 (más abajo que el centro)
 
 ---
 
@@ -52,21 +92,22 @@ Estos assets de borde y decoración aparecen en todas las tapas:
 - **Elementos de cine a eliminar siempre** (mismos sufijos en cada copia):
   - `-LBRLwHnkyTFtqlt8`, `-LB6z5fW58WSFg7Xd`, `-LB9RCbkpRrbf9S5Q`, `-LB1xPS9QPQvlgxXF`, `-LBDjw9BxN0vgKx1h`, `-LBc9rHxlQRS90SzW`, `-LBvlRQb80GXkbS0J`, `-LBmG8bSB1wpqbsMc`, `-LB1rzszbZhf2n6s1`, `-LBmmR2PcxtjDvgCn`
 - **Slots de texto (sufijos):**
-  - Título: `-LBTKLV2vHNzNTSgf` (top: 831 por defecto → reubicar)
-  - Autor: `-LBGnryMRGHDwjbRK` (top: 913 → reubicar)
-  - URL: `-LBfNJsww0sZn1VJ6` (top: 1050 → mantener)
+  - Título: `-LBTKLV2vHNzNTSgf`
+  - Autor: `-LBGnryMRGHDwjbRK`
+  - URL: `-LBfNJsww0sZn1VJ6`
 - **Fondo principal:** sufijo `-LBJjZs5cZg5DX3tx` → eliminar y reemplazar con `insert_fill`
 
 ### Flujo estándar para crear una tapa nueva
 1. `copy-design` desde `DAHIbnET3M4` → nuevo design temporal
-2. `start-editing-transaction` en el nuevo design
-3. `perform-editing-operations` en un solo llamado:
-   - Eliminar los 10 elementos de cine
-   - Eliminar el fondo original (`-LBJjZs5cZg5DX3tx`)
-   - `insert_fill` con el nuevo fondo (usar `left: -150` a `-250` para ajustar encuadre si hay figura humana desplazada)
-   - `replace_text` + `format_text` + `position_element` en los 3 slots
-4. `commit-editing-transaction`
-5. `merge-designs` → insertar página en el archivo destino
+2. `read-design` con `open_transaction: true` → obtener IDs y abrir transacción
+3. `edit-design` con `finalize: "keep_open"` y todas las operaciones en un solo llamado:
+   - Eliminar los 10 elementos de cine + fondo original
+   - `insert_fill` con el nuevo fondo (opacidad 0.79 aplicar después con `update_opacity`)
+   - **`layer_element` con `position: "back"` sobre el fondo recién insertado** ← crítico para que quede detrás del texto
+   - `insert_fill` con `MAHBY_ZFzrQ` (gradiente) encima del fondo
+   - Reemplazar y formatear los slots de texto
+4. `edit-design` con `finalize: "commit"` → guardar
+5. `merge-designs` → insertar página en el archivo destino si corresponde
 
 ---
 
@@ -77,70 +118,64 @@ Estos assets de borde y decoración aparecen en todas las tapas:
 | TODO ROTO (carousel) | `DAHMph5EKoM` | 4 páginas: 3 placas de texto + 1 portada |
 | Entrevistas (multi-página) | `DAHMqbH_iac` | Pág 1: Claudia Bang / Pág 2: Esteban Rodríguez Alzueta |
 
-### TODO ROTO — detalles
-- Portada (pág 4): fondo oscuro + figura+vidrio roto (`MAHMp40MDSw`) + figura sentada (`MAHMpwe6qbQ`)
-- Título portada top: 60, autor top: 155
-- Placas de texto: todas centradas, blanco, bold
-
-### Entrevistas — detalles
-- **Claudia Bang** (pág 1): fondo redes fragmentadas (`MAHMqWiiONs`). Foto a agregar manualmente en Canva.
-- **Esteban Rodríguez Alzueta** (pág 2): silueta juvenil frente a skyline nocturno (`MAHMqopTBYY`), figura corrida a la derecha con `left: -200`. Foto a agregar manualmente en Canva.
-
 ---
 
 ## Criterios de diseño autónomo
 
-Cuando Ignacio pide una tapa o flyer sin especificar todos los detalles, tomar estas decisiones de forma independiente:
+### Imagen de fondo
+- Generar con `generate-design`, prompt cinemático, oscuro, sin texto
+- Presentar 4 candidatos y pedir que elija por número
+- Al insertar: **opacidad 0.79**, reencuadrar para máximo impacto (puede desbordar el canvas)
+- Añadir gradiente `MAHBY_ZFzrQ` encima con opacity 0.72
 
-### Imágenes de fondo
-- Generar con `generate-design` usando prompt cinemático detallado
-- Presentar siempre **4 candidatos** y pedir que elija por número
-- Estilo preferido: fotorrealista oscuro, cinemático, atmosférico, sin texto
-- Paleta: azul marino / negro / cian para temas políticos y sociales
-- Nunca inventar fondos sin generar candidatos primero
+### Título
+- Dividir siempre en DOS elementos:
+  - Arriba: frase corta e impactante, fuente `YACgEUFdPdA`, ~89px, weight normal, tracking -0.064
+  - Abajo: título completo, fuente `YAFdtQi73Xs`, ~70px, ultrabold
+- Ambos blancos, centrados
 
-### Texto
-- Cita: siempre entre comillas tipográficas, centrada, blanca, bold, size 34–38
-- No inventar credenciales — usar exactamente lo que da Ignacio
-- Si falta información, preguntar máximo 3 cosas en una sola vez
+### Foto del autor
+- Siempre circular con borde cian 4px (`#98D4E7`)
+- A la izquierda del byline
+- Ignacio la agrega manualmente en Canva — dejar espacio en esa zona
 
-### Composición
-- Zona superior (top: 0–450) libre para foto del entrevistado — Ignacio la agrega manualmente
-- Cita en zona media (top: 550–650)
-- Byline rojo debajo de la cita (top: ~840)
-- URL siempre al pie (top: ~1050)
+### Byline
+- Con foto: naranja `#FF751F`, ~35px, izquierda desplazada (~left: 268)
+- Sin foto: rojo `#FF3B30`, 20–22px, centrado
 
 ### Decisiones que tomar solo (sin preguntar)
-- Tamaño de fuente dentro del rango establecido
-- Posición exacta de los elementos dentro de los rangos indicados
-- Prompt de generación de imagen de fondo
-- Orden de las operaciones en Canva
+- Cómo partir el título en dos frases
+- Tamaño y posición exactos dentro de los rangos indicados
+- Prompt de generación de imagen
+- Orden de capas
 
 ### Lo que NO hacer nunca
-- Variar alineación de texto entre placas (siempre centrado)
-- Usar fondos claros o colores pastel
-- Superponer dos imágenes generativas sin pedido explícito
-- Confirmar dos veces antes de ejecutar cuando ya hay aprobación
+- Fondo de página gris — siempre negro `#000000`
+- Imagen de fondo a opacidad 1.0 — siempre 0.79
+- Título en un solo elemento de texto
+- Byline centrado cuando hay foto circular
+- Olvidar `layer_element: back` después de `insert_fill`
 
 ---
 
 ## Aprendizajes técnicos de Canva MCP
 
-- `editable: false` en elementos NO impide `delete_element` vía API
+- La nueva API usa `edit-design` en lugar de `perform-editing-operations`
+- `finalize: "keep_open"` aplica operaciones sin guardar; `finalize: "commit"` guarda
+- `editable: false` en elementos NO impide `delete_element`
+- `insert_fill` siempre inserta la imagen **encima** de todo → usar `layer_element: "back"` inmediatamente después
 - `update_fill` no permite controlar posición → usar `delete_element` + `insert_fill` con offset
 - Para desplazar figura humana a la derecha: `insert_fill` con `left: -150` a `-250`
 - `merge-designs` acepta solo 1 operación por llamada
-- Fotos subidas en el chat NO son accesibles como archivos — siempre dejar zona libre y que Ignacio las agregue manualmente
-- `insert_fill` inserta la imagen al fondo de la pila de elementos
-- Los bordes de marca y la barra URL quedan encima automáticamente si ya están en la plantilla
+- Fotos subidas en el chat NO son accesibles como archivos — Ignacio las agrega manualmente
+- Fondo de página se setea desde `background.color`, no desde un elemento
 
 ---
 
 ## Estilo de trabajo con Ignacio
 
-- Prefiere opciones concretas numeradas (1, 2, 3, 4) antes que preguntas abiertas
-- Aprueba por número → ejecutar de inmediato sin pedir confirmación adicional
+- Prefiere opciones concretas numeradas (1, 2, 3, 4) — aprobar por número → ejecutar sin confirmar de nuevo
 - Valora consistencia estética por encima de variación creativa
-- Las iteraciones son normales — no asumir que el primer resultado es el final
+- Las iteraciones son normales
 - Idioma: siempre español rioplatense
-- No explicar lo que se va a hacer en detalle — hacer y reportar el resultado
+- No explicar lo que se va a hacer — hacer y reportar el resultado
