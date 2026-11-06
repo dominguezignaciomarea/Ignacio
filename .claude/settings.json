@@ -16,9 +16,25 @@
       "mcp__Canva__generate-design",
       "mcp__Canva__create-design-from-candidate",
       "mcp__Canva__get-design-content",
+      "mcp__Canva__edit-design",
+      "mcp__Canva__read-design",
+      "mcp__Canva__autofill-design",
+      "mcp__Canva__export-design",
+      "mcp__Canva__get-assets",
+      "mcp__Canva__generate-image",
+      "mcp__Canva__get-generate-image-job",
       "mcp__Google_Drive__read_file_content",
       "mcp__Google_Drive__get_file_metadata",
-      "mcp__Google_Drive__search_files"
+      "mcp__Google_Drive__search_files",
+      "mcp__Google_Drive__list_recent_files",
+      "mcp__github__create_or_update_file",
+      "mcp__github__create_branch",
+      "mcp__github__get_file_contents",
+      "mcp__github__list_branches",
+      "mcp__github__list_commits",
+      "mcp__github__push_files",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
