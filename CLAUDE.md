@@ -108,3 +108,29 @@ Pedime confirmación antes de: modificar la plantilla MAESTRO, el diseño LOGO Y
 - `edit-design` con `finalize: commit` NO puede combinarse con `operations` en la misma llamada
 - locator_id format: `[PAGE_ID]-[ELEMENT_ID]`
 - `merge-designs` con `modify_existing_design` copia TODAS las páginas del diseño fuente, no solo la primera; usar `delete_pages` después para limpiar páginas sobrantes
+
+## Decisiones de diseño de Ignacio (observadas en el carrusel "Los pibes y la Ley")
+
+### Tipografía
+- **Títulos de tapas**: Raleway Heavy — `fontRef: "YAFdJhmxbVQ,1"`, `fontWeight: "heavy"`, interlineado 1.1
+- **Subtítulos/bylines**: Montserrat — `fontRef: "YAFdtQi73Xs,0"`, en variantes `ultrabold` y `semibold`
+- **Etiqueta de sección** (ej. "DOSSIER"): Montserrat Bold, color cyan `#00e5ff`, centrado
+- Montserrat como fuente robusta del sistema (`fontRef: "YAFdtQi73Xs,0"`); Raleway como display para títulos de impacto
+
+### Composición y alineación
+- Títulos: **alineados a la izquierda** (`textAlign: "start"`), NO centrado
+- Título de portada: zona inferior (~y:894), tamaño ~118px, muy dominante
+- Tapas de nota: título en zona media-baja (~y:674), tamaño ~81px
+- Paginación: 7 círculos al pie (y:1229), primero en `#bfbebb` (activo), resto en `#3a3b3f` (inactivo)
+- Gradiente oscuro del MAESTRO (`MAFvW5ALujQ`) sobre el tercio inferior de cada tapa
+
+### Firma del autor en tapas de nota
+- Dos líneas separadas:
+  1. "Entrevista a [nombre]" — blanco, Montserrat ultrabold, ~42px
+  2. "Por [nombre]" — amarillo `#ffde59`, Montserrat semibold, ~33px
+- Nota: `#ffde59` es una elección de Ignacio para este dossier; el manual de marca define violeta `#CB6CE6` como color canónico de firma
+
+### Assets de marca reutilizables
+- Gradiente MAESTRO inferior: `MAFvW5ALujQ`
+- Fotos de entrevistados: Ignacio las agrega manualmente en Canva (no hay acceso vía API)
+- Logo decorativo de portada: `MAHHy8EtCsk`
