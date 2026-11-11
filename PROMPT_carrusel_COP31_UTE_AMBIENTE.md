@@ -184,3 +184,25 @@ Comunicación sindical y ambiental: fuerte, clara y militante, sin verse corpora
 - [ ] Toda foto con degradé oscuro suficiente para legibilidad.
 - [ ] Onda orgánica presente en las 5 placas, variando de posición.
 - [ ] Placa 1 aprobada por el usuario antes de construir el resto.
+
+---
+
+## 9. ASSETS YA SUBIDOS A CANVA (confirmado)
+
+| Imagen | Asset ID | Placa | Nota |
+|---|---|---|---|
+| Foto oficial COP31 — Antalya, Türkiye (cartel con "November 9-20, 2026") | `MAHaoVcG85c` | 1 — Portada | Coincide con la fecha y el lugar del texto |
+| Collage ilustrado: mundo con bufanda sobre fondo de llamas | `MAHaod9m614` | 2 | Es ilustración, no foto: destaca sobre el resto |
+| Foto COP29 — Bakú, Azerbaiyán (atril ONU) | `MAHaoSb2BFQ` | 4 | El texto de la placa nombra la COP29 |
+| Logo UTE AMBIENTE | `MAHMw3Mb6dc` | todas | Subido previamente |
+
+**Placas 3 y 5: SIN FOTO (decisión del usuario).** Se resuelven con fondo de color pleno,
+tipografía de gran tamaño y ondas orgánicas como único recurso gráfico.
+- Placa 3: el "42%" en `#E63329` a 300 px sobre Verde Bosque es el elemento dominante.
+- Placa 5: la consigna final es el elemento dominante.
+
+### Nota de entorno
+El host `www.canva.com` fue agregado a la lista de hosts permitidos del entorno `Ignacio`
+(`env_01JBJfYhqFzRFi7B2s8ZPvgT`). Sin eso, subir archivos locales a Canva falla con
+`connect_rejected` del proxy. Flujo de subida: `create-upload-url` (URL de un solo uso) →
+POST de los bytes crudos con `Content-Type: application/octet-stream` → devuelve el `mediaId`.
