@@ -69,3 +69,24 @@ Gestión de residuos y reciclaje, recicladores/cartoneros urbanos (cooperativas)
 - Copia de Ecoambientalismo (`DAHDkIFbi-I`)
 - ¡ES HORA DE LEVANTARSE, QUERIDO! (`DAHMAcluKjE`)
 - Copia de Copia de r (`DAHC6jFXsZ0`)
+
+---
+
+## Sistema de carrusel 4:5 (referencia normativa real)
+
+Ver **`UTE_AMBIENTE_sistema_carrusel_4x5.md`** — ingeniería inversa del carrusel COP31
+(`DAHaoXka3oQ`) editado a mano por el usuario. Contiene fontRefs, tamaños, posiciones fijas
+e IDs de assets de textura exactos.
+
+**Corrige varias suposiciones de este documento para el formato carrusel:**
+- El fondo de las placas es **negro `#000000`**, no verde.
+- Los títulos van **alineados a la derecha**, en `YAFdJhmxbVQ` peso `heavy` a 109.575.
+- El cuerpo va en **bold, justificado, interlineado 0.97**.
+- Las "ondas orgánicas" son en realidad **papel rasgado** con assets de imagen
+  (`MAFvW5ALujQ`, `MAE0kygyIHE`), no formas generadas.
+- El logo va **centrado al pie, a 288 px**.
+- La navegación son **5 puntos**, no numeración ni flecha.
+- **No se usa acento rojo.**
+
+Regla de trabajo: para un carrusel nuevo, **copiar `DAHaoXka3oQ` y reemplazar contenido**,
+nunca construir desde cero — el conector no permite elegir tipografía ni el peso `heavy`.
